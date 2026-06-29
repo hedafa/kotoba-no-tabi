@@ -684,7 +684,7 @@ rt {
     border-radius: 0;
     box-shadow: none;
   }
-  .page-l { flex: none; min-height: 100svh; border-radius: 0; }
+  .page-l { flex: none; height: auto; min-height: 0; border-radius: 0; }
   .page-r { flex: none; border-radius: 0; padding: 16px; }
   .spine  { display: none; }
   .illus-wrap { height: 60vw; min-height: 220px; }
