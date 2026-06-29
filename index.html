@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ことばの旅</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Kaisei+Decol:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="stage">
+  <div class="book-shadow"></div>
+  <div class="book" id="book">
+
+    <!-- ══ LEFT PAGE (2/3) — 全幅插画 ══ -->
+    <div class="page page-l">
+      <div class="illus-wrap" id="illus-wrap">
+        <img class="illus-img" id="illus-img" src="" alt="">
+        <!-- 封面：书名 + 集标题直接悬浮在图上 -->
+        <div class="cover-overlay">
+          <img class="cover-logo" src="assets/logo/booktitle.png" alt="ことばの旅">
+          <div class="cover-glass-wrap">
+            <span class="cover-ep-label" id="cover-ep-label"></span>
+            <div class="cover-glass-strip"></div>
+          </div>
+        </div>
+        <!-- 封面：左上角自然卷角 + home -->
+        <div class="cover-corner corner-tl" onclick="goHome()">
+          <div class="curl-shadow"></div>
+          <div class="curl-face"></div>
+          <img class="corner-icon" src="assets/icons/home.png" alt="home">
+        </div>
+        <!-- 封面：左下角自然卷角 + back（有上一集时显示） -->
+        <div class="cover-corner corner-bl" onclick="prevPage()">
+          <div class="curl-shadow"></div>
+          <div class="curl-face"></div>
+          <img class="corner-icon" src="assets/icons/back.png" alt="back">
+        </div>
+        <!-- 封面：右下角自然卷角 + next -->
+        <div class="cover-corner corner-br" onclick="nextPage()">
+          <div class="curl-shadow"></div>
+          <div class="curl-face"></div>
+          <img class="corner-icon" src="assets/icons/next.png" alt="next">
+        </div>
+      </div>
+      <div class="story-area">
+        <div class="story-jp" id="story-jp"></div>
+      </div>
+    </div>
+
+    <!-- ══ SPINE ══ -->
+    <div class="spine"></div>
+
+    <!-- ══ RIGHT PAGE (1/3) — 所有控制元素 ══ -->
+    <div class="page page-r">
+
+      <h1 class="ep-title" id="ep-title"></h1>
+      <img class="book-series-title" src="assets/logo/booktitle.png" alt="ことばの旅">
+
+      <p class="rp-zh" id="rp-zh"></p>
+
+      <div class="vocab-stack" id="vocab-stack"></div>
+
+      <div class="pg-row">
+        <div class="pg-dash"></div>
+        <span class="pg-num" id="pg-num"></span>
+        <div class="pg-dash"></div>
+      </div>
+
+      <nav class="icon-bar">
+        <button class="ib" onclick="goHome()">
+          <img src="assets/icons/home.png" alt="home">
+        </button>
+        <button class="ib" id="btn-prev" onclick="prevPage()" disabled>
+          <img src="assets/icons/back.png" alt="back">
+        </button>
+        <button class="ib ib-play" id="btn-play" onclick="togglePlay()">
+          <img src="assets/icons/play.png" id="play-icon" alt="play">
+        </button>
+        <button class="ib" id="btn-next" onclick="nextPage()">
+          <img src="assets/icons/next.png" alt="next">
+        </button>
+        <button class="ib" id="btn-menu" onclick="openMenu()">
+          <img src="assets/icons/menu.png" alt="menu">
+        </button>
+      </nav>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- ══ 选集主目录 ══ -->
+<div class="ep-menu" id="ep-menu">
+  <div class="ep-menu-inner">
+    <img class="ep-menu-logo" src="assets/logo/booktitle.png" alt="ことばの旅">
+    <div class="ep-grid" id="ep-grid"></div>
+  </div>
+</div>
+
+<audio id="audio"></audio>
+<script src="vocab-icons.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

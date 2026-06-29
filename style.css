@@ -1,0 +1,692 @@
+/* ════════════════════════════════════════
+   ことばの旅  —  Physical Book Edition
+   ════════════════════════════════════════ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --stage:    #f4f0e8;      /* 浅米色，无咖啡感 */
+  --page-l:   #fdfaf4;      /* 左页 */
+  --page-r:   #f8f4eb;      /* 右页 */
+  --card:     #ede8d8;      /* 词汇卡片 */
+  --ink:      #1e1b14;
+  --ink2:     #8a7f68;
+  --dashed:   #c0b49a;
+  --font-ser: 'Hiragino Mincho ProN','Yu Mincho','Georgia',serif;
+  --font-san: 'Hiragino Kaku Gothic ProN','PingFang SC','Arial',sans-serif;
+}
+
+html, body {
+  width: 100%; height: 100%;
+  overflow: hidden;
+  background: var(--stage);
+  font-family: var(--font-ser);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ══ Stage ══ */
+.stage {
+  width: 100vw; height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* ══ Table shadow under the book ══ */
+.book-shadow {
+  position: absolute;
+  width: min(960px, 92vw);
+  height: 40px;
+  bottom: calc(50% - min(290px, 44vh) - 32px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse at center,
+    rgba(60,40,10,0.26) 0%, transparent 70%);
+  filter: blur(12px);
+  pointer-events: none;
+}
+
+/* ══ Book ══ */
+.book {
+  display: flex;
+  width: min(960px, 92vw);
+  height: min(580px, 86vh);
+  border-radius: 4px 18px 18px 4px;
+  overflow: visible;       /* let spine stick out */
+  position: relative;
+  /* left-edge stack (book thickness) */
+  box-shadow:
+    -4px 0 0 #b8a470,
+    -8px 0 0 #c8b47c,
+    -10px 2px 0 #d0bc84,
+    -10px 4px 20px rgba(50,30,5,0.30),
+     4px 4px 30px rgba(50,30,5,0.18);
+}
+
+/* round outer corners + page-curve shadow near the spine */
+.page-l {
+  border-radius: 4px 0 0 4px;
+  overflow: hidden;
+  /* pages curve into binding — darkens on the right edge */
+  box-shadow:
+    inset -22px 0 28px rgba(0,0,0,0.07),
+    inset -6px  0 10px rgba(0,0,0,0.08);
+}
+.page-r {
+  border-radius: 0 18px 18px 0;
+  overflow: hidden;
+  /* pages curve into binding — darkens on the left edge */
+  box-shadow:
+    inset 22px 0 28px rgba(0,0,0,0.06),
+    inset 6px  0 10px rgba(0,0,0,0.07);
+}
+
+/* ══ LEFT PAGE — 2/3  (illustration only, no padding) ══ */
+.page-l {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  background: var(--page-l);
+  position: relative;
+  min-width: 0;
+}
+
+/* ── Illustration ── */
+.illus-wrap {
+  flex: 0 0 70%;
+  min-height: 0;
+  margin: 0;
+  border-radius: 0;
+  overflow: hidden;
+  background: #ddd5c0;
+  position: relative;
+}
+
+.illus-img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Story area — white space below illustration ── */
+.story-area {
+  flex: 1 1 0;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 24px;
+}
+
+.story-jp {
+  font-size: clamp(13px, 1.55vw, 17px);
+  line-height: 2.4;
+  letter-spacing: 0.07em;
+  text-align: center;
+  color: var(--ink);
+}
+
+/* Furigana styling */
+ruby { ruby-align: center; }
+rt {
+  font-size: 0.52em;
+  letter-spacing: 0.05em;
+  color: var(--ink2);
+  font-family: var(--font-san);
+}
+
+.story-zh {
+  font-family: var(--font-san);
+  font-size: 12px;
+  color: var(--ink2);
+  letter-spacing: 0.04em;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* ── Dashed divider with page number centred in the line ── */
+.pg-row {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 4px 4px;
+}
+
+.pg-dash {
+  flex: 1;
+  border-top: 1.5px dashed var(--dashed);
+}
+
+.pg-num {
+  font-family: var(--font-san);
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  color: var(--ink2);
+  flex-shrink: 0;
+}
+
+/* ── Icon bar ── */
+.icon-bar {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 8px 0;
+}
+
+.ib {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.50;
+  transition: opacity 0.15s, transform 0.12s;
+}
+.ib:hover  { opacity: 0.90; }
+.ib:active { transform: scale(0.88); }
+.ib:disabled { opacity: 0.15; pointer-events: none; }
+.ib img { width: 40px; height: 40px; object-fit: contain; display: block; }
+
+/* play button is slightly more prominent */
+.ib-play      { opacity: 0.75; }
+.ib-play.on   { opacity: 1; }
+
+/* like button turns fully opaque when liked */
+.ib-like.liked { opacity: 1; }
+
+/* ══ SPINE — realistic book gutter (no gold cylinder) ══ */
+.spine {
+  width: 6px;
+  flex-shrink: 0;
+  align-self: stretch;
+  /* deep crease where the two pages meet */
+  background: linear-gradient(to right,
+    rgba(0,0,0,0.18) 0%,
+    rgba(0,0,0,0.06) 60%,
+    rgba(0,0,0,0.02) 100%);
+}
+
+/* Episode title — hidden on regular pages, shown on cover via .cover-page override */
+.ep-title { display: none; }
+
+/* Book series title — only visible on cover page */
+.book-series-title {
+  display: none;
+}
+.book.cover-page .book-series-title {
+  display: block;
+  max-width: 80%;
+  height: auto;
+  margin: 14px auto 0;
+}
+
+/* ── ことばメモ title — removed ── */
+
+/* ══ RIGHT PAGE — 1/3  (all UI elements) ══ */
+.page-r {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: var(--page-r);
+  padding: 16px 14px 10px 12px;
+  min-width: 0;
+  box-shadow: inset 10px 0 20px rgba(50,30,5,0.05);
+}
+
+/* Episode title — now on right page */
+.ep-title {
+  text-align: center;
+  font-size: clamp(16px, 1.9vw, 22px);
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  color: var(--ink);
+  flex-shrink: 0;
+  margin-bottom: 8px;
+}
+
+/* ── 右页中文词稿（无卡片背景） ── */
+.rp-zh {
+  font-family: var(--font-san);
+  font-size: 15px;
+  color: var(--ink2);
+  line-height: 1.7;
+  letter-spacing: 0.04em;
+  padding: 8px 4px 10px;
+  flex-shrink: 0;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+  margin-bottom: 8px;
+}
+
+/* ── ことばメモ title ── */
+.vocab-memo-title {
+  font-family: var(--font-ser);
+  font-size: 13px;
+  letter-spacing: 0.28em;
+  color: var(--ink2);
+  text-align: center;
+  flex-shrink: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+  margin-bottom: 10px;
+}
+
+/* ── Vocab card stack ── */
+.vocab-stack {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  overflow-y: auto;
+  scrollbar-width: none;
+  min-height: 0;
+}
+.vocab-stack::-webkit-scrollbar { display: none; }
+
+/* ── Vocab card ── */
+.vc {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 8px 12px;
+  /* 右下角阴影 */
+  box-shadow:
+    3px 4px 10px rgba(50,30,5,0.10),
+    1px 2px 4px  rgba(50,30,5,0.07);
+  animation: vcIn 0.3s ease-out backwards;
+  animation-delay: var(--d, 0s);
+  flex-shrink: 0;
+}
+
+@keyframes vcIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* card body: icon on right, text on left */
+.vc-body {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vc-icon {
+  flex-shrink: 0;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
+
+.vc-icon svg {
+  width: 38px;
+  height: 38px;
+  filter: drop-shadow(1.5px 2.5px 3px rgba(50,30,8,0.20));
+  overflow: visible;
+}
+
+.vc-text { flex: 1; min-width: 0; }
+
+/* top row: Japanese word + Chinese side by side */
+.vc-top {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.vc-jp {
+  font-size: clamp(15px, 1.8vw, 20px);
+  letter-spacing: 0.08em;
+  color: var(--ink);
+  line-height: 1.2;
+  flex-shrink: 0;
+}
+
+.vc-zh {
+  font-family: var(--font-san);
+  font-size: 13px;
+  color: var(--ink2);
+  letter-spacing: 0.03em;
+  flex-shrink: 0;
+}
+
+.vc-reading {
+  font-family: var(--font-san);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  color: var(--ink2);
+  margin-top: 3px;
+}
+
+.vc-grammar {
+  font-family: var(--font-san);
+  font-size: 10px;
+  color: var(--ink2);
+  font-style: italic;
+  letter-spacing: 0.02em;
+  margin-left: 3px;
+}
+
+/* ── 对话角色标签 ── */
+.sp {
+  font-family: var(--font-san);
+  font-size: 0.72em;
+  font-weight: 600;
+  color: var(--ink2);
+  letter-spacing: 0.04em;
+  margin-right: 2px;
+}
+.sp::after { content: '：'; }
+
+/* empty state */
+.vc-empty {
+  font-family: var(--font-san);
+  font-size: 11px;
+  color: var(--ink2);
+  letter-spacing: 0.08em;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* ════════════════════════════════════════
+   COVER PAGE overrides
+   ════════════════════════════════════════ */
+
+/* 封面：书脊和右页全隐藏，左页扩展为全书宽度 */
+.book.cover-page .spine  { display: none; }
+.book.cover-page .page-r { display: none; }
+.book.cover-page .page-l { flex: 1; border-radius: 4px 18px 18px 4px; }
+
+/* 封面：插画全幅 */
+.book.cover-page .illus-wrap {
+  flex: 1 1 0;
+  border-radius: 4px 18px 18px 4px;
+}
+.book.cover-page .story-area { display: none; }
+
+/* ── 封面顶部玻璃条幅 ── */
+.cover-overlay { display: none; }
+
+/* ── 封面：书名直接浮于画面中上方 ── */
+.cover-overlay { display: none; }
+.book.cover-page .cover-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 10%; left: 0; right: 0;
+  pointer-events: none;
+}
+
+.cover-logo {
+  height: clamp(100px, 14vw, 192px);
+  width: auto;
+  filter: drop-shadow(0 3px 16px rgba(30,18,5,0.35));
+}
+
+.cover-ep-label {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-family: 'Kaisei Decol', var(--font-ser);
+  font-weight: 700;
+  font-size: clamp(32px, 5.5vw, 72px);
+  letter-spacing: 0.32em;
+  color: #f5e6bb;
+  text-shadow:
+    0 2px 18px rgba(0,0,0,0.55),
+    0 0  40px rgba(0,0,0,0.25);
+  margin-top: 20px;
+}
+/* 外层包装 — 集标题悬于玻璃卡片上边缘 */
+.cover-glass-wrap {
+  position: relative;
+  margin-top: 28px;
+  width: clamp(200px, 52vw, 720px);
+}
+
+/* 集标题浮在卡片顶边 */
+.cover-ep-label {
+  position: absolute !important;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  justify-content: center;
+  z-index: 1;
+}
+
+/* 玻璃卡片本体 */
+.cover-glass-strip {
+  height: clamp(48px, 6vh, 72px);
+  background: rgba(255, 252, 244, 0.18);
+  backdrop-filter: blur(10px) saturate(1.2);
+  -webkit-backdrop-filter: blur(10px) saturate(1.2);
+  border: none;
+  border-radius: 0;
+  box-shadow: 0 4px 28px rgba(20,12,4,0.16);
+}
+
+.cover-ep-label::before,
+.cover-ep-label::after {
+  content: '';
+  flex: 0 0 48px;
+  height: 1.5px;
+  background: rgba(245,230,187,0.65);
+  box-shadow: 0 0 6px rgba(0,0,0,0.30);
+}
+
+/* ── 封面卷角通用 ── */
+.cover-corner {
+  display: none;
+  position: absolute;
+  width: 160px; height: 160px;
+  cursor: pointer;
+  z-index: 20;
+}
+.book.cover-page .cover-corner { display: block; }
+.cover-corner:active { transform: scale(0.96); }
+
+/* 卷角阴影：贴在图像上，模拟被掀起区域下方的暗处 */
+.curl-shadow {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+/* 翻起的页面背面 */
+.curl-face {
+  position: absolute;
+  inset: 0;
+}
+
+/* 图标始终在最顶层 */
+.corner-icon {
+  position: absolute;
+  width: 58px; height: 58px;
+  object-fit: contain;
+  z-index: 2;
+  opacity: 0.82;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.32));
+}
+
+/* ── 左上角 (home) ── */
+.corner-tl { top: 0; left: 0; }
+
+.corner-tl .curl-shadow {
+  background: radial-gradient(ellipse 150px 150px at 0% 0%,
+    rgba(0,0,0,0.28) 0%,
+    rgba(0,0,0,0.10) 42%,
+    transparent 68%);
+  clip-path: path('M 0 0 L 160 0 Q 110 14 0 160 Z');
+}
+.corner-tl .curl-face {
+  background: radial-gradient(ellipse 160px 160px at 0% 0%,
+    #ece5d2 0%,
+    #f6f1e4 38%,
+    rgba(246,241,228,0) 72%);
+  clip-path: path('M 0 0 L 144 0 Q 96 18 0 144 Z');
+  filter: drop-shadow(4px 4px 10px rgba(40,24,6,0.22));
+}
+.corner-tl .corner-icon { top: 26px; left: 26px; }
+
+/* ── 左下角 (back) — 有上一集时显示 ── */
+.corner-bl { bottom: 0; left: 0; display: none; }
+.book.cover-page.has-prev .corner-bl { display: block; }
+
+.corner-bl .curl-shadow {
+  background: radial-gradient(ellipse 150px 150px at 0% 100%,
+    rgba(0,0,0,0.28) 0%,
+    rgba(0,0,0,0.10) 42%,
+    transparent 68%);
+  clip-path: path('M 0 160 L 160 160 Q 146 110 0 0 Z');
+}
+.corner-bl .curl-face {
+  background: radial-gradient(ellipse 160px 160px at 0% 100%,
+    #ece5d2 0%,
+    #f6f1e4 38%,
+    rgba(246,241,228,0) 72%);
+  clip-path: path('M 0 160 L 144 160 Q 128 106 0 16 Z');
+  filter: drop-shadow(3px -3px 8px rgba(40,24,6,0.22));
+}
+.corner-bl .corner-icon { bottom: 26px; left: 26px; }
+
+/* ── 右下角 (next) ── */
+.corner-br { bottom: 0; right: 0; }
+
+.corner-br .curl-shadow {
+  background: radial-gradient(ellipse 150px 150px at 100% 100%,
+    rgba(0,0,0,0.28) 0%,
+    rgba(0,0,0,0.10) 42%,
+    transparent 68%);
+  clip-path: path('M 160 160 L 0 160 Q 50 146 160 0 Z');
+}
+.corner-br .curl-face {
+  background: radial-gradient(ellipse 160px 160px at 100% 100%,
+    #ece5d2 0%,
+    #f6f1e4 38%,
+    rgba(246,241,228,0) 72%);
+  clip-path: path('M 160 160 L 16 160 Q 64 142 160 16 Z');
+  filter: drop-shadow(-4px -4px 10px rgba(40,24,6,0.22));
+}
+.corner-br .corner-icon { bottom: 26px; right: 26px; }
+
+/* ════════════════════════════════════════
+   EPISODE MENU
+   ════════════════════════════════════════ */
+.ep-menu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(244, 240, 232, 0.96);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  align-items: center;
+  justify-content: center;
+}
+.ep-menu.open { display: flex; }
+
+.ep-menu-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  padding: 48px 40px;
+  max-width: 860px;
+  width: 92vw;
+}
+
+.ep-menu-logo {
+  height: clamp(44px, 6vw, 80px);
+  width: auto;
+  opacity: 0.90;
+}
+
+.ep-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.ep-card {
+  background: var(--page-r);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow:
+    0 4px 18px rgba(50,30,5,0.12),
+    0 1px  4px rgba(50,30,5,0.08);
+  cursor: pointer;
+  transition: transform 0.14s, box-shadow 0.14s;
+}
+.ep-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(50,30,5,0.18);
+}
+.ep-card.active {
+  outline: 2px solid var(--ink2);
+  outline-offset: 2px;
+}
+
+.ep-card-img {
+  width: 100%; aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+}
+
+.ep-card-info {
+  padding: 10px 14px 12px;
+}
+.ep-card-sub {
+  font-family: var(--font-san);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  color: var(--ink2);
+  display: block;
+}
+.ep-card-title {
+  font-family: var(--font-ser);
+  font-size: clamp(15px, 1.8vw, 20px);
+  letter-spacing: 0.12em;
+  color: var(--ink);
+  display: block;
+  margin-top: 4px;
+}
+
+/* ════════════════════════════════════════
+   FLIP ANIMATION
+   ════════════════════════════════════════ */
+.illus-wrap.fo-r { transform: perspective(1200px) rotateY(-88deg); transition: transform 0.22s ease-in !important; }
+.illus-wrap.fo-l { transform: perspective(1200px) rotateY(88deg);  transition: transform 0.22s ease-in !important; }
+.illus-wrap.fi-r { transform: perspective(1200px) rotateY(88deg);  transition: none !important; }
+.illus-wrap.fi-l { transform: perspective(1200px) rotateY(-88deg); transition: none !important; }
+.illus-wrap.fs   { transform: perspective(1200px) rotateY(0deg);   transition: transform 0.22s ease-out !important; }
+
+.story-jp.fade, .story-zh.fade, .vocab-stack.fade { opacity: 0; transition: opacity 0.18s ease-in !important; }
+.story-jp.show, .story-zh.show, .vocab-stack.show { opacity: 1; transition: opacity 0.20s ease-out !important; }
+
+/* ════════════════════════════════════════
+   MOBILE  ≤ 640px
+   ════════════════════════════════════════ */
+@media (max-width: 640px) {
+  html, body { overflow: auto; }
+  .stage { align-items: flex-start; height: auto; min-height: 100svh; }
+  .book-shadow { display: none; }
+  .book {
+    flex-direction: column;
+    width: 100vw; height: auto;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .page-l { flex: none; min-height: 100svh; border-radius: 0; }
+  .page-r { flex: none; border-radius: 0; padding: 16px; }
+  .spine  { display: none; }
+  .illus-wrap { height: 38vw; min-height: 160px; }
+  .ib img { width: 36px; height: 36px; }
+}
