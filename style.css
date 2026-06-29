@@ -687,8 +687,8 @@ rt {
   .page-l { flex: none; height: auto; min-height: unset; border-radius: 0; }
   .page-r { flex: none; border-radius: 0; padding: 16px; }
   .spine  { display: none; }
-  .illus-wrap { flex: none; height: auto; aspect-ratio: 4/3; min-height: unset; }
-  .illus-img  { width: 100%; height: 100%; object-fit: cover; }
+  .illus-wrap { flex: none; width: 100%; height: auto; aspect-ratio: 4/3; min-height: unset; }
+  .illus-img  { position: static; width: 100%; height: 100%; object-fit: cover; }
   .story-area { flex: none; padding: 14px 20px; }
   .story-jp   { font-size: clamp(14px, 4vw, 18px); }
   .ib img { width: 36px; height: 36px; }
