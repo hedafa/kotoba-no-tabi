@@ -724,6 +724,7 @@ rt {
   .story-area { flex: none; }
   .story-jp   { font-size: clamp(14px, 4vw, 18px); }
   .ib img { width: 36px; height: 36px; }
+  .ib-label img { width: 82px; height: 82px; }
 
   /* 封面页手机适配 */
   .book.cover-page .illus-wrap { height: 100vw; }
