@@ -319,6 +319,13 @@ function prevPage() {
   busy = false;
 }
 
+function closeSplash() {
+  const splash = document.getElementById('splash');
+  splash.classList.add('hidden');
+  setTimeout(() => splash.style.display = 'none', 600);
+  openMenu();
+}
+
 function goHome() {
   if (busy) return;
   if (idx === 0) { openMenu(); return; }   // 封面再按 → 打开选集菜单
