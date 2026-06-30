@@ -123,6 +123,7 @@ html, body {
 }
 
 .story-jp {
+  font-family: 'Klee One', var(--font-ser);
   font-size: clamp(13px, 1.55vw, 17px);
   line-height: 2.4;
   letter-spacing: 0.07em;
@@ -193,7 +194,7 @@ rt {
 .ib:hover  { opacity: 0.90; }
 .ib:active { transform: scale(0.88); }
 .ib:disabled { opacity: 0.15; pointer-events: none; }
-.ib img { width: 40px; height: 40px; object-fit: contain; display: block; }
+.ib img { width: 60px; height: 60px; object-fit: contain; display: block; }
 
 /* play button is slightly more prominent */
 .ib-play      { opacity: 0.75; }
@@ -612,7 +613,6 @@ rt {
   max-width: 860px;
   width: 92vw;
 }
-
 .ep-menu-logo {
   height: clamp(132px, 18vw, 240px);
   width: auto;
@@ -623,6 +623,7 @@ rt {
   display: flex;
   gap: 32px;
   align-items: center;
+  margin-top: -18px;
 }
 .ep-menu-btn {
   background: none;
