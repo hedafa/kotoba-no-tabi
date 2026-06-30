@@ -197,7 +197,7 @@ rt {
 .ib:hover  { opacity: 0.90; }
 .ib:active { transform: scale(0.88); }
 .ib:disabled { opacity: 0.15; pointer-events: none; }
-.ib img { width: 57px; height: 57px; object-fit: contain; display: block; }
+.ib img { width: 68px; height: 68px; object-fit: contain; display: block; }
 
 /* play button is slightly more prominent */
 .ib-play      { opacity: 0.75; }
