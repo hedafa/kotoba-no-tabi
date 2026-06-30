@@ -248,7 +248,7 @@ rt {
   display: none;
 }
 .book.cover-page .book-series-title {
-  display: block;
+  display: none;
   max-width: 80%;
   height: auto;
   margin: 14px auto 0;
@@ -453,9 +453,7 @@ rt {
 }
 
 .cover-logo {
-  height: clamp(100px, 14vw, 192px);
-  width: auto;
-  filter: drop-shadow(0 3px 16px rgba(30,18,5,0.35));
+  display: none;
 }
 
 .cover-ep-label {
