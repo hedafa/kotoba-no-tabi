@@ -177,7 +177,7 @@ rt {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 4px;
+  gap: 0px;
   padding: 4px 4px 0;
   margin-top: auto;
   padding-bottom: 18px;
