@@ -213,6 +213,7 @@ rt {
   padding-bottom: 12px;
   opacity: 0.55;
 }
+.ib-menu img { width: 82px; height: 82px; }
 .ib-label.marked { opacity: 1; }
 .ib-label img { width: 82px; height: 82px; }
 
