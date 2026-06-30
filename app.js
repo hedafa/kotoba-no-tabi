@@ -319,9 +319,13 @@ function prevPage() {
   busy = false;
 }
 
+const splashAudio = new Audio('assets/cover.mp3');
+
 function closeSplash() {
   const splash = document.getElementById('splash');
   splash.classList.add('hidden');
+  splashAudio.pause();
+  splashAudio.currentTime = 0;
   setTimeout(() => splash.style.display = 'none', 600);
   openMenu();
 }
@@ -368,3 +372,4 @@ document.getElementById('ep-menu').addEventListener('click', e => {
 });
 
 applyContent();
+splashAudio.play().catch(() => {});
