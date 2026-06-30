@@ -123,11 +123,11 @@ html, body {
 }
 
 .story-jp {
-  font-family: 'Klee One', var(--font-ser);
+  font-family: 'Shippori Mincho', var(--font-ser);
   font-size: clamp(13px, 1.55vw, 17px);
   line-height: 2.4;
   letter-spacing: 0.07em;
-  text-align: center;
+  text-align: left;
   color: var(--ink);
 }
 
@@ -628,7 +628,7 @@ rt {
   display: flex;
   gap: 32px;
   align-items: center;
-  margin-top: -18px;
+  margin-top: -36px;
 }
 .ep-menu-btn {
   background: none;
