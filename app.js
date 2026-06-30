@@ -328,11 +328,7 @@ function closeSplash() {
 
 function goHome() {
   if (busy) return;
-  if (idx === 0) { openMenu(); return; }   // 封面再按 → 打开选集菜单
-  busy = true;
-  idx = 0;
-  applyContent();
-  busy = false;
+  openMenu();
 }
 
 // ════════════════════════════════════════
