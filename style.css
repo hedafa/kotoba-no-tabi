@@ -614,29 +614,28 @@ rt {
 }
 
 .ep-menu-logo {
-  height: clamp(44px, 6vw, 80px);
+  height: clamp(132px, 18vw, 240px);
   width: auto;
   opacity: 0.90;
 }
 
 .ep-menu-btns {
   display: flex;
-  gap: 24px;
+  gap: 32px;
+  align-items: center;
 }
 .ep-menu-btn {
-  background: var(--card);
+  background: none;
   border: none;
-  border-radius: 50%;
-  width: 140px; height: 140px;
-  display: flex; align-items: center; justify-content: center;
   cursor: pointer;
   opacity: 0.75;
   transition: opacity 0.15s, transform 0.12s;
-  box-shadow: 0 2px 8px rgba(50,30,5,0.12);
+  padding: 0;
 }
 .ep-menu-btn:hover  { opacity: 1; }
 .ep-menu-btn:active { transform: scale(0.9); }
-.ep-menu-btn img    { width: 70px; height: 70px; object-fit: contain; }
+.ep-menu-btn img    { width: 70px; height: 70px; object-fit: contain; display: block; }
+.ep-menu-btn:first-child img { width: 105px; height: 105px; }
 
 .ep-grid {
   display: grid;
