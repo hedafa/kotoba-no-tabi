@@ -217,6 +217,7 @@ function applyContent() {
 
   btnPrev.disabled = idx === 0 && currentEp === 0;
   btnNext.disabled = idx === total - 1 && currentEp === episodes.length - 1;
+  updateLabelState();
 }
 
 function renderVocab(vocab) {
@@ -343,6 +344,40 @@ function closeSplash() {
 function goHome() {
   if (busy) return;
   openMenu();
+}
+
+function goToSplash() {
+  closeMenu();
+  const splash = document.getElementById('splash');
+  splash.style.display = 'flex';
+  requestAnimationFrame(() => splash.classList.remove('hidden'));
+}
+
+function setBookmark() {
+  localStorage.setItem('kotoba_bookmark', JSON.stringify({ ep: currentEp, page: idx }));
+  document.getElementById('btn-label').classList.add('marked');
+}
+
+function goToBookmark() {
+  const bm = localStorage.getItem('kotoba_bookmark');
+  if (!bm) return;
+  const { ep, page } = JSON.parse(bm);
+  closeMenu();
+  switchEpisode(ep);
+  idx = page;
+  applyContent();
+}
+
+function updateLabelState() {
+  const bm = localStorage.getItem('kotoba_bookmark');
+  const btn = document.getElementById('btn-label');
+  if (!btn) return;
+  if (bm) {
+    const { ep, page } = JSON.parse(bm);
+    btn.classList.toggle('marked', ep === currentEp && page === idx);
+  } else {
+    btn.classList.remove('marked');
+  }
 }
 
 // ════════════════════════════════════════

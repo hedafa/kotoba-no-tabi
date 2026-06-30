@@ -82,8 +82,8 @@
       </div>
 
       <nav class="icon-bar">
-        <button class="ib" onclick="goHome()">
-          <img src="assets/icons/home.png" alt="home">
+        <button class="ib" onclick="openMenu()">
+          <img src="assets/icons/menu.png" alt="menu">
         </button>
         <button class="ib" id="btn-prev" onclick="prevPage()" disabled>
           <img src="assets/icons/back.png" alt="back">
@@ -94,8 +94,8 @@
         <button class="ib" id="btn-next" onclick="nextPage()">
           <img src="assets/icons/next.png" alt="next">
         </button>
-        <button class="ib" id="btn-menu" onclick="openMenu()">
-          <img src="assets/icons/menu.png" alt="menu">
+        <button class="ib ib-label" id="btn-label" onclick="setBookmark()">
+          <img src="assets/icons/label.png" alt="label">
         </button>
       </nav>
 
@@ -108,6 +108,14 @@
 <div class="ep-menu" id="ep-menu">
   <div class="ep-menu-inner">
     <img class="ep-menu-logo" src="assets/logo/booktitle.png" alt="ことばの旅">
+    <div class="ep-menu-btns">
+      <button class="ep-menu-btn" onclick="goToSplash()">
+        <img src="assets/icons/home.png" alt="home">
+      </button>
+      <button class="ep-menu-btn" onclick="goToBookmark()">
+        <img src="assets/icons/label.png" alt="label">
+      </button>
+    </div>
     <div class="ep-grid" id="ep-grid"></div>
   </div>
 </div>

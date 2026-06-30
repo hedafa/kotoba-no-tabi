@@ -76,7 +76,8 @@ html, body {
 }
 .page-r {
   border-radius: 0 18px 18px 0;
-  overflow: hidden;
+  overflow: visible;
+  clip-path: inset(0 -20px -40px 0 round 0 18px 18px 0);
   /* pages curve into binding — darkens on the left edge */
   box-shadow:
     inset 22px 0 28px rgba(0,0,0,0.06),
@@ -200,6 +201,16 @@ rt {
 
 /* like button turns fully opaque when liked */
 .ib-like.liked { opacity: 1; }
+
+/* label bookmark — sticks out below page edge */
+.ib-label {
+  position: relative;
+  margin-bottom: -28px;
+  padding-bottom: 12px;
+  opacity: 0.55;
+}
+.ib-label.marked { opacity: 1; }
+.ib-label img { width: 44px; height: 44px; }
 
 /* ══ SPINE — realistic book gutter (no gold cylinder) ══ */
 .spine {
@@ -607,6 +618,25 @@ rt {
   width: auto;
   opacity: 0.90;
 }
+
+.ep-menu-btns {
+  display: flex;
+  gap: 24px;
+}
+.ep-menu-btn {
+  background: var(--card);
+  border: none;
+  border-radius: 50%;
+  width: 56px; height: 56px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  opacity: 0.75;
+  transition: opacity 0.15s, transform 0.12s;
+  box-shadow: 0 2px 8px rgba(50,30,5,0.12);
+}
+.ep-menu-btn:hover  { opacity: 1; }
+.ep-menu-btn:active { transform: scale(0.9); }
+.ep-menu-btn img    { width: 28px; height: 28px; object-fit: contain; }
 
 .ep-grid {
   display: grid;
