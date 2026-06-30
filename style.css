@@ -473,7 +473,7 @@ rt {
 /* 外层包装 — 集标题悬于玻璃卡片上边缘 */
 .cover-glass-wrap {
   position: relative;
-  margin-top: 14px;
+  margin-top: 4px;
   width: clamp(200px, 52vw, 720px);
 }
 
