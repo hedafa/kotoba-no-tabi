@@ -627,7 +627,7 @@ rt {
   background: var(--card);
   border: none;
   border-radius: 50%;
-  width: 56px; height: 56px;
+  width: 140px; height: 140px;
   display: flex; align-items: center; justify-content: center;
   cursor: pointer;
   opacity: 0.75;
@@ -636,7 +636,7 @@ rt {
 }
 .ep-menu-btn:hover  { opacity: 1; }
 .ep-menu-btn:active { transform: scale(0.9); }
-.ep-menu-btn img    { width: 28px; height: 28px; object-fit: contain; }
+.ep-menu-btn img    { width: 70px; height: 70px; object-fit: contain; }
 
 .ep-grid {
   display: grid;
