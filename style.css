@@ -206,14 +206,12 @@ rt {
 /* like button turns fully opaque when liked */
 .ib-like.liked { opacity: 1; }
 
-/* label bookmark — absolute, anchored bottom-right, sticks out below */
+/* label bookmark — sticks out below page edge */
 .ib-label {
-  position: absolute;
-  bottom: -24px;
-  right: 14px;
-  padding: 0;
+  position: relative;
+  margin-bottom: -28px;
+  padding-bottom: 12px;
   opacity: 0.55;
-  z-index: 10;
 }
 .ib-label.marked { opacity: 1; }
 .ib-label img { width: 82px; height: 82px; }
