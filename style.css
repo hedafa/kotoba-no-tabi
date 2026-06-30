@@ -2,6 +2,17 @@
    ことばの旅  —  Physical Book Edition
    ════════════════════════════════════════ */
 
+@font-face {
+  font-family: 'SweiCurve';
+  src: url('assets/fonts/swei-curve-sans-master/CJK JP/SweiCurveSansCJKjp-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'SweiCurve';
+  src: url('assets/fonts/swei-curve-sans-master/CJK JP/SweiCurveSansCJKjp-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
@@ -123,7 +134,7 @@ html, body {
 }
 
 .story-jp {
-  font-family: 'Shippori Mincho', var(--font-ser);
+  font-family: 'SweiCurve', var(--font-ser);
   font-size: clamp(13px, 1.55vw, 17px);
   line-height: 2.4;
   letter-spacing: 0.07em;
@@ -686,7 +697,8 @@ rt {
   display: block;
 }
 .ep-card-title {
-  font-family: var(--font-ser);
+  font-family: 'SweiCurve', var(--font-ser);
+  font-weight: 500;
   font-size: clamp(15px, 1.8vw, 20px);
   letter-spacing: 0.12em;
   color: var(--ink);
