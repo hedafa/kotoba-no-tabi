@@ -212,7 +212,7 @@ rt {
   opacity: 0.55;
 }
 .ib-label.marked { opacity: 1; }
-.ib-label img { width: 44px; height: 44px; }
+.ib-label img { width: 57px; height: 57px; }
 
 /* ══ SPINE — realistic book gutter (no gold cylinder) ══ */
 .spine {
