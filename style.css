@@ -134,7 +134,7 @@ html, body {
 }
 
 .story-jp {
-  font-family: 'SweiCurve', var(--font-ser);
+  font-family: var(--font-san);
   font-size: clamp(13px, 1.55vw, 17px);
   line-height: 2.4;
   letter-spacing: 0.07em;
@@ -402,7 +402,7 @@ rt {
 
 /* ── 对话角色标签 ── */
 .sp {
-  font-family: var(--font-san);
+  font-family: 'SweiCurve', var(--font-san);
   font-size: 0.72em;
   font-weight: 600;
   color: var(--ink2);
@@ -697,8 +697,7 @@ rt {
   display: block;
 }
 .ep-card-title {
-  font-family: 'SweiCurve', var(--font-ser);
-  font-weight: 500;
+  font-family: var(--font-san);
   font-size: clamp(15px, 1.8vw, 20px);
   letter-spacing: 0.12em;
   color: var(--ink);
