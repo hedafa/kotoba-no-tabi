@@ -321,6 +321,16 @@ function prevPage() {
 
 const splashAudio = new Audio('assets/cover.mp3');
 
+// 封面第一次被触碰时启动音效（绕过浏览器自动播放限制）
+document.addEventListener('DOMContentLoaded', () => {
+  const splashBook = document.querySelector('.splash-book');
+  if (splashBook) {
+    splashBook.addEventListener('pointerdown', () => {
+      splashAudio.play().catch(() => {});
+    }, { once: true });
+  }
+});
+
 function closeSplash() {
   const splash = document.getElementById('splash');
   splash.classList.add('hidden');
@@ -372,4 +382,3 @@ document.getElementById('ep-menu').addEventListener('click', e => {
 });
 
 applyContent();
-splashAudio.play().catch(() => {});
