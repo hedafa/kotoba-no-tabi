@@ -368,6 +368,7 @@ rt {
 }
 
 .vc-jp {
+  font-family: var(--font-san);
   font-size: clamp(15px, 1.8vw, 20px);
   letter-spacing: 0.08em;
   color: var(--ink);
