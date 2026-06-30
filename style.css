@@ -178,7 +178,7 @@ rt {
   align-items: center;
   justify-content: center;
   gap: 4px;
-  padding: 2px 4px 0;
+  padding: 10px 4px 0;
 }
 
 .ib {
@@ -195,7 +195,7 @@ rt {
 .ib:hover  { opacity: 0.90; }
 .ib:active { transform: scale(0.88); }
 .ib:disabled { opacity: 0.15; pointer-events: none; }
-.ib img { width: 52px; height: 52px; object-fit: contain; display: block; }
+.ib img { width: 57px; height: 57px; object-fit: contain; display: block; }
 
 /* play button is slightly more prominent */
 .ib-play      { opacity: 0.75; }
