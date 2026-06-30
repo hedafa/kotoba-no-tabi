@@ -338,6 +338,7 @@ function togglePlay() {
   playing ? audioEl.pause() : audioEl.play().catch(() => {});
 }
 function stopPlay() {
+  audioEl.pause();
   playing = false;
   playIcon.src = 'assets/icons/play.png';
   btnPlay.classList.remove('on');
