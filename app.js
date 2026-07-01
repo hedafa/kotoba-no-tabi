@@ -206,6 +206,62 @@ const episodes = [
         ]
       }
     ]
+  },
+
+  // ── EP 05 映画館 ───────────────────
+  {
+    title:    "映画館",
+    subtitle: "EP 05",
+    basePath: "./episodes/EP005_电影/",
+    pages: [
+      {
+        image: "title.png", audio: "title.mp3",
+        jpHtml: r(`{映画館|えいがかん}`), isCover: true, vocab: []
+      },
+      {
+        image: "scene1.png", audio: "s1.mp3",
+        jpHtml: r(`<span class="sp">{田中|たなか}さん</span>どれも{面白|おもしろ}そうですね。<br><span class="sp">蘭</span>そうですね、{何|なに}を{見|み}たらいいでしょうか。`),
+        zhText: "田中：每一部看起来都很有趣呢。\n蘭：是啊，看什么好呢。",
+        vocab: [
+          { jp: "面白い",     reading: "おもしろい", zh: "有趣",    grammar: "イ形容詞" },
+          { jp: "〜そう",     reading: "〜そう",     zh: "看起来〜", grammar: "助動詞" },
+          { jp: "〜たらいい", reading: "〜たらいい", zh: "〜好呢",   grammar: "表現" }
+        ]
+      },
+      {
+        image: "scene2.png", audio: "s2.mp3",
+        jpHtml: r(`<span class="sp">{田中|たなか}さん</span>{邵|しょう}さんはどんな{種類|しゅるい}の{映画|えいが}が{好|す}きですか？<br><span class="sp">蘭</span>アクションとホラーかな。{田中|たなか}さんは？<br><span class="sp">{田中|たなか}さん</span>{探偵|たんてい}が{一番|いちばん}{好|す}きです。<br><span class="sp">蘭</span>あ、なるほど。ドキドキして{面白|おもしろ}いですね。`),
+        zhText: "田中：邵小姐喜欢什么类型的电影？\n蘭：动作和恐怖片吧。田中你呢？\n田中：我最喜欢侦探片。\n蘭：啊，原来如此。让人心跳加速，很有意思呢。",
+        vocab: [
+          { jp: "種類",       reading: "しゅるい",  zh: "种类",     grammar: "名詞" },
+          { jp: "探偵",       reading: "たんてい",  zh: "侦探",     grammar: "名詞" },
+          { jp: "なるほど",   reading: "なるほど",  zh: "原来如此", grammar: "感動詞" },
+          { jp: "ドキドキ",   reading: "どきどき",  zh: "心跳加速", grammar: "副詞" }
+        ]
+      },
+      {
+        image: "scene3.png", audio: "s3.mp3",
+        jpHtml: r(`<span class="sp">{田中|たなか}さん</span>でもポスターを{見|み}るとアクションもホラーも{探偵|たんてい}もないですね。<br><span class="sp">蘭</span>それではこれ、{恋愛|れんあい}のテーマのものにしましょう。`),
+        zhText: "田中：但是看海报，动作、恐怖、侦探片都没有呢。\n蘭：那就选这个吧，恋爱主题的。",
+        vocab: [
+          { jp: "ポスター",      reading: "ぽすたー",      zh: "海报",    grammar: "名詞" },
+          { jp: "恋愛",          reading: "れんあい",      zh: "恋爱",    grammar: "名詞" },
+          { jp: "テーマ",        reading: "てーま",        zh: "主题",    grammar: "名詞" },
+          { jp: "〜にしましょう", reading: "〜にしましょう", zh: "就定〜吧", grammar: "表現" }
+        ]
+      },
+      {
+        image: "scene4.png", audio: "s4.mp3",
+        jpHtml: r(`<span class="sp">{田中|たなか}さん</span>{僕|ぼく}、{泣|な}きますからいやです。<br><span class="sp">蘭</span>{田中|たなか}さんは{泣|な}きますか？じゃ、これにしましょう。<br>　{僕|ぼく}はチケットを{買|か}ってきます。`),
+        zhText: "田中：我会哭的，不太好。\n蘭：田中你会哭啊？那就选这个吧。我去买票。",
+        vocab: [
+          { jp: "泣く",       reading: "なく",       zh: "哭",     grammar: "動詞" },
+          { jp: "いやだ",     reading: "いやだ",     zh: "不喜欢", grammar: "ナ形容詞" },
+          { jp: "チケット",   reading: "ちけっと",   zh: "票",     grammar: "名詞" },
+          { jp: "買ってくる", reading: "かってくる", zh: "去买来", grammar: "動詞" }
+        ]
+      }
+    ]
   }
 
 ];
