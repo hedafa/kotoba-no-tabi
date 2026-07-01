@@ -151,6 +151,61 @@ const episodes = [
         ]
       }
     ]
+  },
+
+  // ── EP 04 チョコレート ───────────────────
+  {
+    title:    "チョコレート",
+    subtitle: "EP 04",
+    basePath: "./episodes/EP004_巧克力/",
+    pages: [
+      {
+        image: "title.png", audio: "title.mp3",
+        jpHtml: r(`チョコレート`), isCover: true, vocab: []
+      },
+      {
+        image: "scene1.png", audio: "s1.mp3",
+        jpHtml: r(`<span class="sp">蘭</span>{友達|ともだち}にプレゼントをあげたいですけど。<br>　{何|なに}がいいかな。{困|こま}りますね。`),
+        zhText: "蘭：我想送朋友礼物，送什么好呢。真让人烦恼。",
+        vocab: [
+          { jp: "プレゼント", reading: "ぷれぜんと", zh: "礼物",        grammar: "名詞" },
+          { jp: "あげる",     reading: "あげる",     zh: "给（对方）",  grammar: "動詞" },
+          { jp: "困る",       reading: "こまる",     zh: "为难、烦恼",  grammar: "動詞" }
+        ]
+      },
+      {
+        image: "scene2.png", audio: "s2.mp4",
+        jpHtml: r(`<span class="sp">店員</span>プレゼントでしたら、チョコレートをお{勧|すす}めします。<br><span class="sp">蘭</span>{確|たし}かに{包装|ほうそう}が{綺麗|きれい}ですね。<br><span class="sp">店員</span>{地元|じもと}の{特色|とくしょく}もあります。それに、<br>　{二|ふた}つ{買|か}うと{割引|わりびき}があります。`),
+        zhText: "店员：如果是礼物的话，推荐巧克力。\n蘭：确实包装很漂亮呢。\n店员：也有当地特色。而且，买两个有折扣。",
+        vocab: [
+          { jp: "お勧め",  reading: "おすすめ",   zh: "推荐",   grammar: "名詞／動詞" },
+          { jp: "確かに",  reading: "たしかに",   zh: "确实",   grammar: "副詞" },
+          { jp: "包装",    reading: "ほうそう",   zh: "包装",   grammar: "名詞" },
+          { jp: "地元",    reading: "じもと",     zh: "当地",   grammar: "名詞" },
+          { jp: "割引",    reading: "わりびき",   zh: "折扣",   grammar: "名詞" }
+        ]
+      },
+      {
+        image: "scene3.png", audio: "s3.mp4",
+        jpHtml: r(`<span class="sp">蘭</span>いいですね。それでは、２つをお{願|ねが}いします。<br><span class="sp">店員</span>はい、かしこまりました。<br><span class="sp">蘭</span>お{会計|かいけい}はカードでいいですか。<br><span class="sp">店員</span>もちろんです。`),
+        zhText: "蘭：不错。那就要两个吧。\n店员：好的，明白了。\n蘭：结账可以刷卡吗？\n店员：当然可以。",
+        vocab: [
+          { jp: "かしこまりました", reading: "かしこまりました", zh: "明白了（敬语）", grammar: "慣用句" },
+          { jp: "お会計",          reading: "おかいけい",       zh: "结账",          grammar: "名詞" },
+          { jp: "もちろん",        reading: "もちろん",         zh: "当然",          grammar: "副詞" }
+        ]
+      },
+      {
+        image: "scene4.png", audio: "s4.mp4",
+        jpHtml: r(`<span class="sp">蘭</span>あのう、{明日|あした}も{割引|わりびき}がありますか？<br><span class="sp">店員</span>え、なんですか？<br><span class="sp">蘭</span>{財布|さいふ}をホテルに{忘|わす}れました。`),
+        zhText: "蘭：那个……明天也有折扣吗？\n店员：嗯？什么？\n蘭：我把钱包忘在酒店了。",
+        vocab: [
+          { jp: "財布",    reading: "さいふ",   zh: "钱包",  grammar: "名詞" },
+          { jp: "忘れる",  reading: "わすれる", zh: "忘记",  grammar: "動詞" },
+          { jp: "〜に忘れる", reading: "〜にわすれる", zh: "忘在〜（地方）", grammar: "動詞句" }
+        ]
+      }
+    ]
   }
 
 ];
