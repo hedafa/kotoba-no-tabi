@@ -508,9 +508,12 @@ function applyContent() {
     illusImg.src = newSrc;
   }
 
-  // 预加载下一页图片
+  // 预加载下一页图片和音频
   const next = episode.pages[idx + 1];
-  if (next) { const pre = new Image(); pre.src = episode.basePath + next.image; }
+  if (next) {
+    const pre = new Image(); pre.src = episode.basePath + next.image;
+    const preAudio = new Audio(); preAudio.preload = 'auto'; preAudio.src = episode.basePath + next.audio;
+  }
 
   const book = document.getElementById('book');
   book.classList.toggle('cover-page', !!p.isCover);
