@@ -630,24 +630,24 @@ rt {
   max-width: 860px;
   width: 92vw;
 }
-.ep-menu-logo {
-  height: clamp(132px, 18vw, 240px);
-  width: auto;
-  opacity: 0.90;
-}
-
 .ep-menu-header {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  gap: 24px;
+  gap: 28px;
+  width: 100%;
 }
-
+.ep-menu-logo {
+  height: clamp(132px, 18vw, 240px);
+  width: auto;
+  opacity: 0.90;
+  flex-shrink: 0;
+}
 .ep-menu-btns {
   display: flex;
-  gap: 32px;
+  flex-direction: row;
+  gap: 20px;
   align-items: flex-end;
-  padding-bottom: 8px;
 }
 .ep-menu-btn {
   background: none;
@@ -659,8 +659,7 @@ rt {
 }
 .ep-menu-btn:hover  { opacity: 1; }
 .ep-menu-btn:active { transform: scale(0.9); }
-.ep-menu-btn img    { width: 70px; height: 70px; object-fit: contain; display: block; }
-.ep-menu-btn:first-child img { width: 105px; height: 105px; }
+.ep-menu-btn img    { width: 82px; height: 82px; object-fit: contain; display: block; }
 
 .ep-grid {
   display: grid;
