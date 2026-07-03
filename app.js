@@ -19,11 +19,11 @@ const episodes = [
     basePath: CDN + "episodes/EP001_空港/",
     pages: [
       {
-        image: "title.png", audio: "title.mp3",
+        image: "title.webp", audio: "title.mp3",
         jpHtml: r(`{空港|くうこう}`), isCover: true, vocab: []
       },
       {
-        image: "scene1.png", audio: "s1.mp3",
+        image: "scene1.webp", audio: "s1.mp3",
         jpHtml: r(`{私|わたし}の{日常生活|にちじょうせいかつ}は、{出張|しゅっちょう}が{多|おお}いのでよく{空港|くうこう}へ{行|い}きます。<br>{空港|くうこう}に{行|い}って、また{空港|くうこう}から{出発|しゅっぱつ}します。`),
         zhText: "我的日常生活，因为出差多，所以经常去机场。去了机场，又从机场出发。",
         vocab: [
@@ -33,7 +33,7 @@ const episodes = [
         ]
       },
       {
-        image: "scene2.png", audio: "s2.mp3",
+        image: "scene2.webp", audio: "s2.mp3",
         jpHtml: r(`{時間|じかん}があれば、コンビニで{食|た}べ{物|もの}を{買|か}います。`),
         zhText: "如果有时间，会在便利店买些吃的。",
         vocab: [
@@ -43,7 +43,7 @@ const episodes = [
         ]
       },
       {
-        image: "scene3.png", audio: "s3.mp3",
+        image: "scene3.webp", audio: "s3.mp3",
         jpHtml: r(`{海外|かいがい}では、お{土産|みやげ}の{店|みせ}でお{土産|みやげ}を{買|か}います。`),
         zhText: "在海外，会在伴手礼店买伴手礼。",
         vocab: [
@@ -53,7 +53,7 @@ const episodes = [
         ]
       },
       {
-        image: "scene4.png", audio: "s4.mp3",
+        image: "scene4.webp", audio: "s4.mp3",
         jpHtml: r(`{待|ま}っている{時|とき}に、{仕事|しごと}をすることもありますよ。<br>{会社|かいしゃ}を{経営|けいえい}している{私|わたし}にとっては、<br>{仕事|しごと}が{一番|いちばん}{重要|じゅうよう}なことですから。`),
         zhText: "等待的时候，也会工作哦。对于经营公司的我来说，工作是最重要的事情。",
         vocab: [
@@ -63,7 +63,7 @@ const episodes = [
         ]
       },
       {
-        image: "scene5.png", audio: "s5.mp3",
+        image: "scene5.webp", audio: "s5.mp3",
         jpHtml: r(`{今|いま}の{私|わたし}は{何|なに}を{考|かんが}えていますか？{当|あ}ててみて？<br>{飛行機|ひこうき}の{弁当|べんとう}のことを{考|かんが}えていますよ！`),
         zhText: "现在的我在想什么？你猜猜看？我在想飞机上的便当！",
         vocab: [
@@ -82,11 +82,11 @@ const episodes = [
     basePath: CDN + "episodes/EP002_咖啡馆/",
     pages: [
       {
-        image: "title.png", audio: "title.mp3",
+        image: "title.webp", audio: "title.mp3",
         jpHtml: "カフェ", isCover: true, vocab: []
       },
       {
-        image: "scene1.png", audio: "s1.mp3",
+        image: "scene1.webp", audio: "s1.mp3",
         jpHtml: `<span class="sp">スタッフ</span>いらっしゃいませ！<br><span class="sp">蘭</span>こんにちは、<ruby>一人<rt>ひとり</rt></ruby>です。<br><span class="sp">スタッフ</span>こちらへどうぞ！`,
         zhText: "店员：欢迎光临！\n蘭：你好，我一个人。\n店员：请往这边走！",
         vocab: [
@@ -96,7 +96,7 @@ const episodes = [
         ]
       },
       {
-        image: "scene2.png", audio: "s2.mp3",
+        image: "scene2.webp", audio: "s2.mp3",
         jpHtml: `<span class="sp">蘭</span>あのう、すみません。メニューはあまり<ruby>読<rt>よ</rt></ruby>めないので<br><ruby>お勧め<rt>おすすめ</rt></ruby>はありますか？<br><span class="sp">スタッフ</span>はい、<ruby>当店<rt>とうてん</rt></ruby>の<ruby>一番人気<rt>いちばんにんき</rt></ruby>はカフェラテです。`,
         zhText: "蘭：不好意思，我不太看得懂菜单，有什么推荐的吗？\n店员：我们店最受欢迎的是拿铁咖啡。",
         vocab: [
@@ -107,7 +107,7 @@ const episodes = [
         ]
       },
       {
-        image: "scene3.png", audio: "s3.mp3",
+        image: "scene3.webp", audio: "s3.mp3",
         jpHtml: `<span class="sp">蘭</span>ホットですか。<ruby>私<rt>わたし</rt></ruby>は<ruby>冷<rt>つめ</rt></ruby>たいのが<ruby>好<rt>す</rt></ruby>きですけど。<br><span class="sp">スタッフ</span>そうですか。それでは、アイスカフェラテで<br><ruby>ご用意<rt>ごようい</rt></ruby>いたします。`,
         zhText: "蘭：是热的吗？我比较喜欢冷的。\n店员：这样啊。那我们为您准备冰拿铁。",
         vocab: [
@@ -117,7 +117,7 @@ const episodes = [
         ]
       },
       {
-        image: "scene4.png", audio: "s4.mp3",
+        image: "scene4.webp", audio: "s4.mp3",
         jpHtml: `<span class="sp">蘭</span>ちょっと<ruby>待<rt>ま</rt></ruby>ってね。これ、<ruby>美味<rt>おい</rt></ruby>しそう。<br><span class="sp">スタッフ</span>イチゴショートケーキですね。これも<ruby>人気<rt>にんき</rt></ruby>ありますよ。<br><span class="sp">蘭</span>じゃ、これも<ruby>お願<rt>おねが</rt></ruby>いします。<br><span class="sp">スタッフ</span><ruby>少々<rt>しょうしょう</rt></ruby>お<ruby>待<rt>ま</rt></ruby>ちください。`,
         zhText: "蘭：等一下。这个看起来好好吃。\n店员：草莓奶油蛋糕呢，这个也很受欢迎哦。\n蘭：那这个也要。\n店员：好的，请稍等。",
         vocab: [
@@ -136,11 +136,11 @@ const episodes = [
     basePath: CDN + "episodes/EP003_打电话/",
     pages: [
       {
-        image: "title.png", audio: "title.mp3",
+        image: "title.webp", audio: "title.mp3",
         jpHtml: r(`{電話|でんわ}をかける`), isCover: true, vocab: []
       },
       {
-        image: "scene1.png", audio: "s1.mp3",
+        image: "scene1.webp", audio: "s1.mp3",
         jpHtml: r(`<span class="sp">{渡辺|わたなべ}さん</span>もしもし、{渡辺|わたなべ}です。<br><span class="sp">蘭</span>もしもし、{邵|しょう}です。<br><span class="sp">{渡辺|わたなべ}さん</span>{明日|あした}、{空|あ}いていますか？<br><span class="sp">蘭</span>{明日|あした}の{午後|ごご}は{空|あ}いていますよ。{何|なん}ですか？`),
         zhText: "渡辺：喂，我是渡辺。\n蘭：喂，我是邵。\n渡辺：明天有空吗？\n蘭：明天下午有空哦。怎么了？",
         vocab: [
@@ -150,7 +150,7 @@ const episodes = [
         ]
       },
       {
-        image: "scene2.png", audio: "s2.mp3",
+        image: "scene2.webp", audio: "s2.mp3",
         jpHtml: r(`<span class="sp">{渡辺|わたなべ}さん</span>バスケットボールやりましょうか。<br><span class="sp">蘭</span>やりたいですけど、{天気予報|てんきよほう}を{聞|き}きましたか？<br><span class="sp">{渡辺|わたなべ}さん</span>いや、{聞|き}いていないですけど……`),
         zhText: "渡辺：要不要打篮球？\n蘭：想打，但你看天气预报了吗？\n渡辺：没有……没看。",
         vocab: [
@@ -159,7 +159,7 @@ const episodes = [
         ]
       },
       {
-        image: "scene3.png", audio: "s3.mp3",
+        image: "scene3.webp", audio: "s3.mp3",
         jpHtml: r(`<span class="sp">蘭</span>{明日|あした}はすごい{雨|あめ}が{降|ふ}りますよ。<br><span class="sp">{渡辺|わたなべ}さん</span>うそ！<br><span class="sp">蘭</span>うそじゃないですよ。{残念|ざんねん}。<br><span class="sp">{渡辺|わたなべ}さん</span>じゃ、{来週|らいしゅう}にしましょうか。`),
         zhText: "蘭：明天会下好大的雨哦。\n渡辺：不会吧！\n蘭：不是骗你。真遗憾。\n渡辺：那，改成下周吧？",
         vocab: [
@@ -179,11 +179,11 @@ const episodes = [
     basePath: CDN + "episodes/EP004_巧克力/",
     pages: [
       {
-        image: "title.png", audio: "title.mp3",
+        image: "title.webp", audio: "title.mp3",
         jpHtml: r(`チョコレート`), isCover: true, vocab: []
       },
       {
-        image: "scene1.png", audio: "s1.mp3",
+        image: "scene1.webp", audio: "s1.mp3",
         jpHtml: r(`<span class="sp">蘭</span>{友達|ともだち}にプレゼントをあげたいですけど。<br>　{何|なに}がいいかな。{困|こま}りますね。`),
         zhText: "蘭：我想送朋友礼物，送什么好呢。真让人烦恼。",
         vocab: [
@@ -193,7 +193,7 @@ const episodes = [
         ]
       },
       {
-        image: "scene2.png", audio: "s2.mp3",
+        image: "scene2.webp", audio: "s2.mp3",
         jpHtml: r(`<span class="sp">店員</span>プレゼントでしたら、チョコレートをお{勧|すす}めします。<br><span class="sp">蘭</span>{確|たし}かに{包装|ほうそう}が{綺麗|きれい}ですね。<br><span class="sp">店員</span>{地元|じもと}の{特色|とくしょく}もあります。それに、<br>　{二|ふた}つ{買|か}うと{割引|わりびき}があります。`),
         zhText: "店员：如果是礼物的话，推荐巧克力。\n蘭：确实包装很漂亮呢。\n店员：也有当地特色。而且，买两个有折扣。",
         vocab: [
@@ -205,7 +205,7 @@ const episodes = [
         ]
       },
       {
-        image: "scene3.png", audio: "s3.mp3",
+        image: "scene3.webp", audio: "s3.mp3",
         jpHtml: r(`<span class="sp">蘭</span>いいですね。それでは、２つをお{願|ねが}いします。<br><span class="sp">店員</span>はい、かしこまりました。<br><span class="sp">蘭</span>お{会計|かいけい}はカードでいいですか。<br><span class="sp">店員</span>もちろんです。`),
         zhText: "蘭：不错。那就要两个吧。\n店员：好的，明白了。\n蘭：结账可以刷卡吗？\n店员：当然可以。",
         vocab: [
@@ -215,7 +215,7 @@ const episodes = [
         ]
       },
       {
-        image: "scene4.png", audio: "s4.mp3",
+        image: "scene4.webp", audio: "s4.mp3",
         jpHtml: r(`<span class="sp">蘭</span>あのう、{明日|あした}も{割引|わりびき}がありますか？<br><span class="sp">店員</span>え、なんですか？<br><span class="sp">蘭</span>{財布|さいふ}をホテルに{忘|わす}れました。`),
         zhText: "蘭：那个……明天也有折扣吗？\n店员：嗯？什么？\n蘭：我把钱包忘在酒店了。",
         vocab: [
@@ -234,11 +234,11 @@ const episodes = [
     basePath: CDN + "episodes/EP005_电影/",
     pages: [
       {
-        image: "title.png", audio: "title.mp3",
+        image: "title.webp", audio: "title.mp3",
         jpHtml: r(`{映画館|えいがかん}`), isCover: true, vocab: []
       },
       {
-        image: "scene1.png", audio: "s1.mp3",
+        image: "scene1.webp", audio: "s1.mp3",
         jpHtml: r(`<span class="sp">{田中|たなか}さん</span>どれも{面白|おもしろ}そうですね。<br><span class="sp">蘭</span>そうですね、{何|なに}を{見|み}たらいいでしょうか。`),
         zhText: "田中：每一部看起来都很有趣呢。\n蘭：是啊，看什么好呢。",
         vocab: [
@@ -248,7 +248,7 @@ const episodes = [
         ]
       },
       {
-        image: "scene2.png", audio: "s2.mp3",
+        image: "scene2.webp", audio: "s2.mp3",
         jpHtml: r(`<span class="sp">{田中|たなか}さん</span>{邵|しょう}さんはどんな{種類|しゅるい}の{映画|えいが}が{好|す}きですか？<br><span class="sp">蘭</span>アクションとホラーかな。{田中|たなか}さんは？<br><span class="sp">{田中|たなか}さん</span>{探偵|たんてい}が{一番|いちばん}{好|す}きです。<br><span class="sp">蘭</span>あ、なるほど。ドキドキして{面白|おもしろ}いですね。`),
         zhText: "田中：邵小姐喜欢什么类型的电影？\n蘭：动作和恐怖片吧。田中你呢？\n田中：我最喜欢侦探片。\n蘭：啊，原来如此。让人心跳加速，很有意思呢。",
         vocab: [
@@ -259,7 +259,7 @@ const episodes = [
         ]
       },
       {
-        image: "scene3.png", audio: "s3.mp3",
+        image: "scene3.webp", audio: "s3.mp3",
         jpHtml: r(`<span class="sp">{田中|たなか}さん</span>でもポスターを{見|み}るとアクションもホラーも{探偵|たんてい}もないですね。<br><span class="sp">蘭</span>それではこれ、{恋愛|れんあい}のテーマのものにしましょう。`),
         zhText: "田中：但是看海报，动作、恐怖、侦探片都没有呢。\n蘭：那就选这个吧，恋爱主题的。",
         vocab: [
@@ -270,7 +270,7 @@ const episodes = [
         ]
       },
       {
-        image: "scene4.png", audio: "s4.mp3",
+        image: "scene4.webp", audio: "s4.mp3",
         jpHtml: r(`<span class="sp">{田中|たなか}さん</span>{僕|ぼく}、{泣|な}きますからいやです。<br><span class="sp">蘭</span>{田中|たなか}さんは{泣|な}きますか？じゃ、これにしましょう。<br>　{僕|ぼく}はチケットを{買|か}ってきます。`),
         zhText: "田中：我会哭的，不太好。\n蘭：田中你会哭啊？那就选这个吧。我去买票。",
         vocab: [
@@ -290,11 +290,11 @@ const episodes = [
     basePath: CDN + "episodes/EP006_早饭/",
     pages: [
       {
-        image: "title.png", audio: "title.mp3",
+        image: "title.webp", audio: "title.mp3",
         jpHtml: r(`{朝|あさ}ごはん`), isCover: true, vocab: []
       },
       {
-        image: "scene1.png", audio: "s1.mp3",
+        image: "scene1.webp", audio: "s1.mp3",
         jpHtml: r(`{毎日|まいにち}、{朝|あさ}ごはんは{何|なに}を{食|た}べますか？<br>{中国|ちゅうごく}では、{朝|あさ}ごはんに{饅頭|まんとう}やお{粥|かゆ}、{卵|たまご}を<br>{食|た}べる{習慣|しゅうかん}があります。`),
         zhText: "每天早饭吃什么？在中国，早饭有吃馒头、粥、鸡蛋的习惯。",
         vocab: [
@@ -304,7 +304,7 @@ const episodes = [
         ]
       },
       {
-        image: "scene2.png", audio: "s2.mp3",
+        image: "scene2.webp", audio: "s2.mp3",
         jpHtml: r(`アメリカでは、パンとコーヒーでしょう。`),
         zhText: "在美国，应该是面包和咖啡吧。",
         vocab: [
@@ -313,7 +313,7 @@ const episodes = [
         ]
       },
       {
-        image: "scene3.png", audio: "s3.mp3",
+        image: "scene3.webp", audio: "s3.mp3",
         jpHtml: r(`フランスはどうでしょうか？{私|わたし}は{行|い}ったことがありますよ。<br>あそこの{朝|あさ}ごはんは……タバコです。<br>ははは、{冗談|じょうだん}です、{冗談|じょうだん}です。`),
         zhText: "法国怎么样呢？我去过哦。那里的早饭是……香烟。哈哈哈，开玩笑的，开玩笑的。",
         vocab: [
@@ -322,7 +322,7 @@ const episodes = [
         ]
       },
       {
-        image: "scene4.png", audio: "s4.mp3",
+        image: "scene4.webp", audio: "s4.mp3",
         jpHtml: r(`{日本|にほん}にはまだ{行|い}ったことがありませんが、<br>{大切|たいせつ}なのは{食事|しょくじ}の{前|まえ}に「いただきます」と{言|い}うことです。<br>{神様|かみさま}に{対|たい}して、{感謝|かんしゃ}の{気持|きも}ちを{持|も}つことが{大切|たいせつ}です。`),
         zhText: "我还没去过日本，但重要的是饭前说「いただきます」。对神灵抱有感恩之心，这很重要。",
         vocab: [
@@ -332,7 +332,7 @@ const episodes = [
         ]
       },
       {
-        image: "scene5.png", audio: "s5.mp3",
+        image: "scene5.webp", audio: "s5.mp3",
         jpHtml: r(`{私|わたし}の{秘密|ひみつ}を{聞|き}きたいですか？<br>{実|じつ}は、{神様|かみさま}よりもマクドナルドに{感謝|かんしゃ}しています。<br>{内緒|ないしょ}にしてね！`),
         zhText: "想听我的秘密吗？其实，比起神灵，我更感谢麦当劳。保密哦！",
         vocab: [
@@ -351,11 +351,11 @@ const episodes = [
     basePath: CDN + "episodes/EP008_超市/",
     pages: [
       {
-        image: "title.png", audio: "title.mp3",
+        image: "title.webp", audio: "title.mp3",
         jpHtml: r(`スーパー`), isCover: true, vocab: []
       },
       {
-        image: "scene1.png", audio: "s1.mp3",
+        image: "scene1.webp", audio: "s1.mp3",
         jpHtml: r(`<span class="sp">蘭</span>リンゴが{食|た}べたいです。<br><span class="sp">{渡辺|わたなべ}</span>でも{見|み}て、この{西瓜|すいか}、{大|おお}きいですね。`),
         zhText: "蘭：我想吃苹果。\n渡辺：但是你看，这个西瓜好大啊。",
         vocab: [
@@ -365,7 +365,7 @@ const episodes = [
         ]
       },
       {
-        image: "scene2.png", audio: "s2.mp3",
+        image: "scene2.webp", audio: "s2.mp3",
         jpHtml: r(`<span class="sp">蘭</span>{重|おも}いでしょう。{私|わたし}も{一緒|いっしょ}に{持|も}ちましょう。<br><span class="sp">{渡辺|わたなべ}</span>ありがとうございます。カートに{入|い}れましょう。`),
         zhText: "蘭：很重吧。我也一起拿吧。\n渡辺：谢谢。放进购物车吧。",
         vocab: [
@@ -375,7 +375,7 @@ const episodes = [
         ]
       },
       {
-        image: "scene3.png", audio: "s3.mp3",
+        image: "scene3.webp", audio: "s3.mp3",
         jpHtml: r(`<span class="sp">蘭</span>{後|あと}は{牛乳|ぎゅうにゅう}とパンですね。{明日|あした}の{朝|あさ}ごはんに{食|た}べます。<br><span class="sp">{渡辺|わたなべ}</span>それではお{会計|かいけい}しますね。{買|か}い{物|もの}リストをチェックしましょう。<br><span class="sp">蘭</span>あ、ビールを{忘|わす}れました。`),
         zhText: "蘭：还有牛奶和面包吧。明天早饭吃。\n渡辺：那去结账吧。检查一下购物清单。\n蘭：啊，忘了啤酒了。",
         vocab: [
@@ -385,7 +385,7 @@ const episodes = [
         ]
       },
       {
-        image: "scene4.png", audio: "s4.mp3",
+        image: "scene4.webp", audio: "s4.mp3",
         jpHtml: r(`<span class="sp">{渡辺|わたなべ}</span>{大丈夫|だいじょうぶ}。ビールはコンビニで{買|か}いましょう。<br><span class="sp">蘭</span>え、どうして？`),
         zhText: "渡辺：没关系。啤酒去便利店买吧。\n蘭：哦？为什么？",
         vocab: [
@@ -394,7 +394,7 @@ const episodes = [
         ]
       },
       {
-        image: "scene5.png", audio: "s5.mp3",
+        image: "scene5.webp", audio: "s5.mp3",
         jpHtml: r(`<span class="sp">{渡辺|わたなべ}</span>コンビニの{店員|てんいん}さん、かっこいいですよ。`),
         zhText: "渡辺：便利店的店员，很帅哦。",
         vocab: [
@@ -412,11 +412,11 @@ const episodes = [
     basePath: CDN + "episodes/EP007_热/",
     pages: [
       {
-        image: "title.png", audio: "title.mp3",
+        image: "title.webp", audio: "title.mp3",
         jpHtml: r(`{暑|あつ}い`), isCover: true, vocab: []
       },
       {
-        image: "scene1.png", audio: "s1.mp3",
+        image: "scene1.webp", audio: "s1.mp3",
         jpHtml: r(`<span class="sp">蘭</span>おはようございます。<br><span class="sp">{渡辺|わたなべ}</span>おはようございます。<br><span class="sp">蘭</span>{今日|きょう}は{暑|あつ}いですね。<br><span class="sp">{渡辺|わたなべ}</span>そうですね。{雨|あめ}が{降|ふ}った{後|あと}、{蒸|む}し{暑|あつ}くなりますね。`),
         zhText: "蘭：早上好。\n渡辺：早上好。\n蘭：今天好热啊。\n渡辺：是啊。下完雨之后会变得闷热呢。",
         vocab: [
@@ -426,7 +426,7 @@ const episodes = [
         ]
       },
       {
-        image: "scene2.png", audio: "s2.mp3",
+        image: "scene2.webp", audio: "s2.mp3",
         jpHtml: r(`<span class="sp">蘭</span>{今年|ことし}の{天気|てんき}はおかしいですよね。{渡辺|わたなべ}さんの{故郷|こきょう}はどうですか？<br><span class="sp">{渡辺|わたなべ}</span>{私|わたし}の{故郷|こきょう}は{今|いま}、{梅雨|つゆ}ですよ。{梅雨|つゆ}が{終|お}わると、めちゃくちゃ{暑|あつ}くなります。<br><span class="sp">蘭</span>そうですか。{大変|たいへん}ですね。`),
         zhText: "蘭：今年的天气真奇怪。渡辺老家那边怎么样？\n渡辺：我老家现在是梅雨季节。梅雨结束之后会超级热。\n蘭：这样啊。真辛苦呢。",
         vocab: [
@@ -436,7 +436,7 @@ const episodes = [
         ]
       },
       {
-        image: "scene3.png", audio: "s3.mp3",
+        image: "scene3.webp", audio: "s3.mp3",
         jpHtml: r(`<span class="sp">{渡辺|わたなべ}</span>そうだ、これを{食|た}べてください。<br><span class="sp">蘭</span>え？{渡辺|わたなべ}さん、カバンの{中|なか}にアイスクリームも{入|はい}っていますか？`),
         zhText: "渡辺：对了，请吃这个。\n蘭：哦？渡辺，包包里面还有冰淇淋吗？",
         vocab: [
@@ -446,7 +446,7 @@ const episodes = [
         ]
       },
       {
-        image: "scene4.png", audio: "s4.mp3",
+        image: "scene4.webp", audio: "s4.mp3",
         jpHtml: r(`<span class="sp">{渡辺|わたなべ}</span>ええ、チョコレートと{苺|いちご}、どっちがいいですか？<br><span class="sp">蘭</span>へへへ、{僕|ぼく}、マンゴが{好|す}きですけど。`),
         zhText: "渡辺：是啊，巧克力和草莓，哪个好？\n蘭：嘿嘿嘿，我喜欢芒果。",
         vocab: [
@@ -456,7 +456,7 @@ const episodes = [
         ]
       },
       {
-        image: "scene5.png", audio: "s5.mp3",
+        image: "scene5.webp", audio: "s5.mp3",
         jpHtml: r(`<span class="sp">{渡辺|わたなべ}</span>ごめんなさい。これしかありません。`),
         zhText: "渡辺：对不起。只有这个了。",
         vocab: [
@@ -582,7 +582,7 @@ function openMenu() {
     const card = document.createElement('div');
     card.className = 'ep-card' + (i === currentEp ? ' active' : '');
     card.innerHTML = `
-      <img class="ep-card-img" src="${ep.basePath}title.png" alt="${ep.title}">
+      <img class="ep-card-img" src="${ep.basePath}title.webp" alt="${ep.title}">
       <div class="ep-card-info">
         <span class="ep-card-sub">${ep.subtitle}</span>
         <span class="ep-card-title">${ep.title}</span>
@@ -711,12 +711,12 @@ function togglePlay() {
 function stopPlay() {
   audioEl.pause();
   playing = false;
-  playIcon.src = 'assets/icons/play.png';
+  playIcon.src = 'assets/icons/play.webp';
   btnPlay.classList.remove('on');
 }
 audioEl.addEventListener('play', () => {
   playing = true;
-  playIcon.src = 'assets/icons/pause.png';
+  playIcon.src = 'assets/icons/pause.webp';
   btnPlay.classList.add('on');
 });
 audioEl.addEventListener('pause', stopPlay);
