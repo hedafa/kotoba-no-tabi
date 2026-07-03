@@ -279,6 +279,189 @@ const episodes = [
         ]
       }
     ]
+  },
+
+  // ── EP 06 朝ごはん ───────────────────
+  {
+    title:    "朝ごはん",
+    subtitle: "EP 06",
+    basePath: "./episodes/EP006_早饭/",
+    pages: [
+      {
+        image: "title.png", audio: "title.mp3",
+        jpHtml: r(`{朝|あさ}ごはん`), isCover: true, vocab: []
+      },
+      {
+        image: "scene1.png", audio: "s1.mp3",
+        jpHtml: r(`{毎日|まいにち}、{朝|あさ}ごはんは{何|なに}を{食|た}べますか？<br>{中国|ちゅうごく}では、{朝|あさ}ごはんに{饅頭|まんとう}やお{粥|かゆ}、{卵|たまご}を<br>{食|た}べる{習慣|しゅうかん}があります。`),
+        zhText: "每天早饭吃什么？在中国，早饭有吃馒头、粥、鸡蛋的习惯。",
+        vocab: [
+          { jp: "朝ごはん", reading: "あさごはん", zh: "早饭",  grammar: "名詞" },
+          { jp: "饅頭",     reading: "まんとう",   zh: "馒头",  grammar: "名詞" },
+          { jp: "習慣",     reading: "しゅうかん", zh: "习惯",  grammar: "名詞" }
+        ]
+      },
+      {
+        image: "scene2.png", audio: "s2.mp3",
+        jpHtml: r(`アメリカでは、パンとコーヒーでしょう。`),
+        zhText: "在美国，应该是面包和咖啡吧。",
+        vocab: [
+          { jp: "〜でしょう", reading: "〜でしょう", zh: "应该是〜吧", grammar: "表現" },
+          { jp: "パン",       reading: "ぱん",       zh: "面包",      grammar: "名詞" }
+        ]
+      },
+      {
+        image: "scene3.png", audio: "s3.mp3",
+        jpHtml: r(`フランスはどうでしょうか？{私|わたし}は{行|い}ったことがありますよ。<br>あそこの{朝|あさ}ごはんは……タバコです。<br>ははは、{冗談|じょうだん}です、{冗談|じょうだん}です。`),
+        zhText: "法国怎么样呢？我去过哦。那里的早饭是……香烟。哈哈哈，开玩笑的，开玩笑的。",
+        vocab: [
+          { jp: "〜たことがある", reading: "〜たことがある", zh: "曾经做过〜", grammar: "表現" },
+          { jp: "冗談",           reading: "じょうだん",     zh: "玩笑",      grammar: "名詞" }
+        ]
+      },
+      {
+        image: "scene4.png", audio: "s4.mp3",
+        jpHtml: r(`{日本|にほん}にはまだ{行|い}ったことがありませんが、<br>{大切|たいせつ}なのは{食事|しょくじ}の{前|まえ}に「いただきます」と{言|い}うことです。<br>{神様|かみさま}に{対|たい}して、{感謝|かんしゃ}の{気持|きも}ちを{持|も}つことが{大切|たいせつ}です。`),
+        zhText: "我还没去过日本，但重要的是饭前说"いただきます"。对神灵抱有感恩之心，这很重要。",
+        vocab: [
+          { jp: "いただきます", reading: "いただきます",   zh: "我开动了（饭前用语）", grammar: "慣用句" },
+          { jp: "神様",         reading: "かみさま",       zh: "神、神灵",             grammar: "名詞" },
+          { jp: "感謝",         reading: "かんしゃ",       zh: "感谢",                 grammar: "名詞・する動詞" }
+        ]
+      },
+      {
+        image: "scene5.png", audio: "s5.mp3",
+        jpHtml: r(`{私|わたし}の{秘密|ひみつ}を{聞|き}きたいですか？<br>{実|じつ}は、{神様|かみさま}よりもマクドナルドに{感謝|かんしゃ}しています。<br>{内緒|ないしょ}にしてね！`),
+        zhText: "想听我的秘密吗？其实，比起神灵，我更感谢麦当劳。保密哦！",
+        vocab: [
+          { jp: "秘密",  reading: "ひみつ",   zh: "秘密",     grammar: "名詞" },
+          { jp: "実は",  reading: "じつは",   zh: "其实",     grammar: "副詞" },
+          { jp: "内緒",  reading: "ないしょ", zh: "秘密、保密", grammar: "名詞" }
+        ]
+      }
+    ]
+  },
+
+  // ── EP 07 スーパー ───────────────────
+  {
+    title:    "スーパー",
+    subtitle: "EP 07",
+    basePath: "./episodes/EP008_超市/",
+    pages: [
+      {
+        image: "title.png", audio: "title.mp3",
+        jpHtml: r(`スーパー`), isCover: true, vocab: []
+      },
+      {
+        image: "scene1.png", audio: "s1.mp3",
+        jpHtml: r(`<span class="sp">蘭</span>リンゴが{食|た}べたいです。<br><span class="sp">{渡辺|わたなべ}</span>でも{見|み}て、この{西瓜|すいか}、{大|おお}きいですね。`),
+        zhText: "蘭：我想吃苹果。\n渡辺：但是你看，这个西瓜好大啊。",
+        vocab: [
+          { jp: "リンゴ",   reading: "りんご",   zh: "苹果",   grammar: "名詞" },
+          { jp: "西瓜",     reading: "すいか",   zh: "西瓜",   grammar: "名詞" },
+          { jp: "〜たい",   reading: "〜たい",   zh: "想〜",   grammar: "助動詞" }
+        ]
+      },
+      {
+        image: "scene2.png", audio: "s2.mp3",
+        jpHtml: r(`<span class="sp">蘭</span>{重|おも}いでしょう。{私|わたし}も{一緒|いっしょ}に{持|も}ちましょう。<br><span class="sp">{渡辺|わたなべ}</span>ありがとうございます。カートに{入|い}れましょう。`),
+        zhText: "蘭：很重吧。我也一起拿吧。\n渡辺：谢谢。放进购物车吧。",
+        vocab: [
+          { jp: "重い",     reading: "おもい",   zh: "重",      grammar: "イ形容詞" },
+          { jp: "一緒に",   reading: "いっしょに", zh: "一起",  grammar: "副詞" },
+          { jp: "カート",   reading: "かーと",   zh: "购物车",  grammar: "名詞" }
+        ]
+      },
+      {
+        image: "scene3.png", audio: "s3.mp3",
+        jpHtml: r(`<span class="sp">蘭</span>{後|あと}は{牛乳|ぎゅうにゅう}とパンですね。{明日|あした}の{朝|あさ}ごはんに{食|た}べます。<br><span class="sp">{渡辺|わたなべ}</span>それではお{会計|かいけい}しますね。{買|か}い{物|もの}リストをチェックしましょう。<br><span class="sp">蘭</span>あ、ビールを{忘|わす}れました。`),
+        zhText: "蘭：还有牛奶和面包吧。明天早饭吃。\n渡辺：那去结账吧。检查一下购物清单。\n蘭：啊，忘了啤酒了。",
+        vocab: [
+          { jp: "牛乳",       reading: "ぎゅうにゅう", zh: "牛奶",    grammar: "名詞" },
+          { jp: "買い物リスト", reading: "かいものりすと", zh: "购物清单", grammar: "名詞" },
+          { jp: "忘れる",     reading: "わすれる",     zh: "忘记",    grammar: "動詞" }
+        ]
+      },
+      {
+        image: "scene4.png", audio: "s4.mp3",
+        jpHtml: r(`<span class="sp">{渡辺|わたなべ}</span>{大丈夫|だいじょうぶ}。ビールはコンビニで{買|か}いましょう。<br><span class="sp">蘭</span>え、どうして？`),
+        zhText: "渡辺：没关系。啤酒去便利店买吧。\n蘭：哦？为什么？",
+        vocab: [
+          { jp: "大丈夫", reading: "だいじょうぶ", zh: "没关系、没问题", grammar: "ナ形容詞" },
+          { jp: "どうして", reading: "どうして",   zh: "为什么",        grammar: "副詞" }
+        ]
+      },
+      {
+        image: "scene5.png", audio: "s5.mp3",
+        jpHtml: r(`<span class="sp">{渡辺|わたなべ}</span>コンビニの{店員|てんいん}さん、かっこいいですよ。`),
+        zhText: "渡辺：便利店的店员，很帅哦。",
+        vocab: [
+          { jp: "店員",     reading: "てんいん", zh: "店员",   grammar: "名詞" },
+          { jp: "かっこいい", reading: "かっこいい", zh: "帅气、酷", grammar: "イ形容詞" }
+        ]
+      }
+    ]
+  },
+
+  // ── EP 08 暑い ───────────────────
+  {
+    title:    "暑い",
+    subtitle: "EP 08",
+    basePath: "./episodes/EP007_热/",
+    pages: [
+      {
+        image: "title.png", audio: "title.mp3",
+        jpHtml: r(`{暑|あつ}い`), isCover: true, vocab: []
+      },
+      {
+        image: "scene1.png", audio: "s1.mp3",
+        jpHtml: r(`<span class="sp">蘭</span>おはようございます。<br><span class="sp">{渡辺|わたなべ}</span>おはようございます。<br><span class="sp">蘭</span>{今日|きょう}は{暑|あつ}いですね。<br><span class="sp">{渡辺|わたなべ}</span>そうですね。{雨|あめ}が{降|ふ}った{後|あと}、{蒸|む}し{暑|あつ}くなりますね。`),
+        zhText: "蘭：早上好。\n渡辺：早上好。\n蘭：今天好热啊。\n渡辺：是啊。下完雨之后会变得闷热呢。",
+        vocab: [
+          { jp: "暑い",   reading: "あつい",     zh: "热",    grammar: "イ形容詞" },
+          { jp: "蒸し暑い", reading: "むしあつい", zh: "闷热", grammar: "イ形容詞" },
+          { jp: "〜後",   reading: "〜あと",     zh: "〜之后", grammar: "表現" }
+        ]
+      },
+      {
+        image: "scene2.png", audio: "s2.mp3",
+        jpHtml: r(`<span class="sp">蘭</span>{今年|ことし}の{天気|てんき}はおかしいですよね。{渡辺|わたなべ}さんの{故郷|こきょう}はどうですか？<br><span class="sp">{渡辺|わたなべ}</span>{私|わたし}の{故郷|こきょう}は{今|いま}、{梅雨|つゆ}ですよ。{梅雨|つゆ}が{終|お}わると、めちゃくちゃ{暑|あつ}くなります。<br><span class="sp">蘭</span>そうですか。{大変|たいへん}ですね。`),
+        zhText: "蘭：今年的天气真奇怪。渡辺老家那边怎么样？\n渡辺：我老家现在是梅雨季节。梅雨结束之后会超级热。\n蘭：这样啊。真辛苦呢。",
+        vocab: [
+          { jp: "故郷",       reading: "こきょう",     zh: "故乡、老家",   grammar: "名詞" },
+          { jp: "梅雨",       reading: "つゆ",         zh: "梅雨季节",     grammar: "名詞" },
+          { jp: "めちゃくちゃ", reading: "めちゃくちゃ", zh: "超级、非常",  grammar: "副詞" }
+        ]
+      },
+      {
+        image: "scene3.png", audio: "s3.mp3",
+        jpHtml: r(`<span class="sp">{渡辺|わたなべ}</span>そうだ、これを{食|た}べてください。<br><span class="sp">蘭</span>え？{渡辺|わたなべ}さん、カバンの{中|なか}にアイスクリームも{入|はい}っていますか？`),
+        zhText: "渡辺：对了，请吃这个。\n蘭：哦？渡辺，包包里面还有冰淇淋吗？",
+        vocab: [
+          { jp: "カバン",       reading: "かばん",       zh: "包、包包",  grammar: "名詞" },
+          { jp: "アイスクリーム", reading: "あいすくりーむ", zh: "冰淇淋", grammar: "名詞" },
+          { jp: "〜の中に",     reading: "〜のなかに",   zh: "在〜里面",  grammar: "表現" }
+        ]
+      },
+      {
+        image: "scene4.png", audio: "s4.mp3",
+        jpHtml: r(`<span class="sp">{渡辺|わたなべ}</span>ええ、チョコレートと{苺|いちご}、どっちがいいですか？<br><span class="sp">蘭</span>へへへ、{僕|ぼく}、マンゴが{好|す}きですけど。`),
+        zhText: "渡辺：是啊，巧克力和草莓，哪个好？\n蘭：嘿嘿嘿，我喜欢芒果。",
+        vocab: [
+          { jp: "苺",     reading: "いちご", zh: "草莓",          grammar: "名詞" },
+          { jp: "どっち", reading: "どっち", zh: "哪个（两者中）", grammar: "代名詞" },
+          { jp: "マンゴ", reading: "まんご", zh: "芒果",          grammar: "名詞" }
+        ]
+      },
+      {
+        image: "scene5.png", audio: "s5.mp3",
+        jpHtml: r(`<span class="sp">{渡辺|わたなべ}</span>ごめんなさい。これしかありません。`),
+        zhText: "渡辺：对不起。只有这个了。",
+        vocab: [
+          { jp: "〜しかない", reading: "〜しかない", zh: "只有〜", grammar: "表現" }
+        ]
+      }
+    ]
   }
 
 ];
