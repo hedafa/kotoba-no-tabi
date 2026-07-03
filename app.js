@@ -191,7 +191,7 @@ const episodes = [
         ]
       },
       {
-        image: "scene2.png", audio: "s2.mp4",
+        image: "scene2.png", audio: "s2.mp3",
         jpHtml: r(`<span class="sp">店員</span>プレゼントでしたら、チョコレートをお{勧|すす}めします。<br><span class="sp">蘭</span>{確|たし}かに{包装|ほうそう}が{綺麗|きれい}ですね。<br><span class="sp">店員</span>{地元|じもと}の{特色|とくしょく}もあります。それに、<br>　{二|ふた}つ{買|か}うと{割引|わりびき}があります。`),
         zhText: "店员：如果是礼物的话，推荐巧克力。\n蘭：确实包装很漂亮呢。\n店员：也有当地特色。而且，买两个有折扣。",
         vocab: [
@@ -203,7 +203,7 @@ const episodes = [
         ]
       },
       {
-        image: "scene3.png", audio: "s3.mp4",
+        image: "scene3.png", audio: "s3.mp3",
         jpHtml: r(`<span class="sp">蘭</span>いいですね。それでは、２つをお{願|ねが}いします。<br><span class="sp">店員</span>はい、かしこまりました。<br><span class="sp">蘭</span>お{会計|かいけい}はカードでいいですか。<br><span class="sp">店員</span>もちろんです。`),
         zhText: "蘭：不错。那就要两个吧。\n店员：好的，明白了。\n蘭：结账可以刷卡吗？\n店员：当然可以。",
         vocab: [
@@ -213,7 +213,7 @@ const episodes = [
         ]
       },
       {
-        image: "scene4.png", audio: "s4.mp4",
+        image: "scene4.png", audio: "s4.mp3",
         jpHtml: r(`<span class="sp">蘭</span>あのう、{明日|あした}も{割引|わりびき}がありますか？<br><span class="sp">店員</span>え、なんですか？<br><span class="sp">蘭</span>{財布|さいふ}をホテルに{忘|わす}れました。`),
         zhText: "蘭：那个……明天也有折扣吗？\n店员：嗯？什么？\n蘭：我把钱包忘在酒店了。",
         vocab: [
