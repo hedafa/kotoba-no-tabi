@@ -652,6 +652,18 @@ document.addEventListener('DOMContentLoaded', () => {
       splashAudio.play().catch(() => {});
     }, { once: true });
   }
+
+  // 后台预加载所有集封面图和第一集第一场景
+  setTimeout(() => {
+    episodes.forEach((ep, i) => {
+      const img = new Image();
+      img.src = ep.basePath + 'title.webp';
+      if (i === 0) {
+        const img2 = new Image();
+        img2.src = ep.basePath + 'scene1.webp';
+      }
+    });
+  }, 1000);
 });
 
 function closeSplash() {
