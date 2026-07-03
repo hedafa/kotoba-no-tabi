@@ -636,11 +636,18 @@ rt {
   opacity: 0.90;
 }
 
+.ep-menu-header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 24px;
+}
+
 .ep-menu-btns {
   display: flex;
   gap: 32px;
-  align-items: center;
-  margin-top: -54px;
+  align-items: flex-end;
+  padding-bottom: 8px;
 }
 .ep-menu-btn {
   background: none;
