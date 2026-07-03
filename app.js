@@ -2,6 +2,8 @@
 //  ことばの旅  —  Episode Data
 // ════════════════════════════════════════
 
+const CDN = "https://cdn.jsdelivr.net/gh/hedafa/kotoba-no-tabi@main/";
+
 // 振り仮名ヘルパー: {漢字|よみ} → <ruby>漢字<rt>よみ</rt></ruby>
 function r(s) {
   return s.replace(/\{([^|]+)\|([^}]+)\}/g,
@@ -14,7 +16,7 @@ const episodes = [
   {
     title:    "空港",
     subtitle: "EP 01",
-    basePath: "./episodes/EP001_空港/",
+    basePath: CDN + "episodes/EP001_空港/",
     pages: [
       {
         image: "title.webp", audio: "title.mp3",
@@ -77,7 +79,7 @@ const episodes = [
   {
     title:    "カフェ",
     subtitle: "EP 02",
-    basePath: "./episodes/EP002_咖啡馆/",
+    basePath: CDN + "episodes/EP002_咖啡馆/",
     pages: [
       {
         image: "title.webp", audio: "title.mp3",
@@ -131,7 +133,7 @@ const episodes = [
   {
     title:    "電話をかける",
     subtitle: "EP 03",
-    basePath: "./episodes/EP003_打电话/",
+    basePath: CDN + "episodes/EP003_打电话/",
     pages: [
       {
         image: "title.webp", audio: "title.mp3",
@@ -174,7 +176,7 @@ const episodes = [
   {
     title:    "チョコレート",
     subtitle: "EP 04",
-    basePath: "./episodes/EP004_巧克力/",
+    basePath: CDN + "episodes/EP004_巧克力/",
     pages: [
       {
         image: "title.webp", audio: "title.mp3",
@@ -229,7 +231,7 @@ const episodes = [
   {
     title:    "映画館",
     subtitle: "EP 05",
-    basePath: "./episodes/EP005_电影/",
+    basePath: CDN + "episodes/EP005_电影/",
     pages: [
       {
         image: "title.webp", audio: "title.mp3",
@@ -285,7 +287,7 @@ const episodes = [
   {
     title:    "朝ごはん",
     subtitle: "EP 06",
-    basePath: "./episodes/EP006_早饭/",
+    basePath: CDN + "episodes/EP006_早饭/",
     pages: [
       {
         image: "title.webp", audio: "title.mp3",
@@ -346,7 +348,7 @@ const episodes = [
   {
     title:    "スーパー",
     subtitle: "EP 07",
-    basePath: "./episodes/EP008_超市/",
+    basePath: CDN + "episodes/EP008_超市/",
     pages: [
       {
         image: "title.webp", audio: "title.mp3",
@@ -407,7 +409,7 @@ const episodes = [
   {
     title:    "暑い",
     subtitle: "EP 08",
-    basePath: "./episodes/EP007_热/",
+    basePath: CDN + "episodes/EP007_热/",
     pages: [
       {
         image: "title.webp", audio: "title.mp3",
