@@ -499,7 +499,16 @@ function applyContent() {
   const total = episode.pages.length;
 
   epTitle.textContent = episode.title;
-  illusImg.src = episode.basePath + p.image;
+  const newSrc = episode.basePath + p.image;
+  if (illusImg.src !== newSrc) {
+    illusImg.style.opacity = '0';
+    illusImg.onload = () => { illusImg.style.opacity = '1'; };
+    illusImg.src = newSrc;
+  }
+
+  // 预加载下一页图片
+  const next = episode.pages[idx + 1];
+  if (next) { const pre = new Image(); pre.src = episode.basePath + next.image; }
 
   const book = document.getElementById('book');
   book.classList.toggle('cover-page', !!p.isCover);
