@@ -18,39 +18,56 @@ const episodes = [
     pages: [
       {
         image: "title.png", audio: "title.mp3",
-        jpHtml: "空　港", isCover: true, vocab: []
+        jpHtml: r(`{空港|くうこう}`), isCover: true, vocab: []
       },
       {
         image: "scene1.png", audio: "s1.mp3",
-        jpHtml: `<ruby>空港<rt>くうこう</rt></ruby>は、私が<ruby>出発<rt>しゅっぱつ</rt></ruby>する<ruby>場所<rt>ばしょ</rt></ruby>であり、<br><ruby>到着<rt>とうちゃく</rt></ruby>する<ruby>場所<rt>ばしょ</rt></ruby>でもあります。`,
-        zhText: "机场，是我出发的地方，也是我抵达的地方。",
+        jpHtml: r(`{私|わたし}の{日常生活|にちじょうせいかつ}は、{出張|しゅっちょう}が{多|おお}いのでよく{空港|くうこう}へ{行|い}きます。<br>{空港|くうこう}に{行|い}って、また{空港|くうこう}から{出発|しゅっぱつ}します。`),
+        zhText: "我的日常生活，因为出差多，所以经常去机场。去了机场，又从机场出发。",
         vocab: [
-          { jp: "空港",  reading: "くうこう",   zh: "机场",       grammar: "名詞",         icon: "🛫" },
-          { jp: "出発",  reading: "しゅっぱつ", zh: "出发",       grammar: "名詞・する動詞", icon: "🚀" },
-          { jp: "到着",  reading: "とうちゃく", zh: "到达",       grammar: "名詞・する動詞", icon: "🛬" },
-          { jp: "場所",  reading: "ばしょ",     zh: "地方、场所", grammar: "名詞",          icon: "📍" }
+          { jp: "日常生活", reading: "にちじょうせいかつ", zh: "日常生活", grammar: "名詞" },
+          { jp: "出張",     reading: "しゅっちょう",       zh: "出差",    grammar: "名詞" },
+          { jp: "出発",     reading: "しゅっぱつ",         zh: "出发",    grammar: "名詞・する動詞" }
         ]
       },
       {
         image: "scene2.png", audio: "s2.mp3",
-        jpHtml: `私は<ruby>空港<rt>くうこう</rt></ruby>で<ruby>待<rt>ま</rt></ruby>ったり、<br>コンビニで<ruby>食<rt>た</rt></ruby>べ<ruby>物<rt>もの</rt></ruby>を<ruby>買<rt>か</rt></ruby>ったりします。`,
-        zhText: "我在机场等候，也会去便利店买些轻食。",
+        jpHtml: r(`{時間|じかん}があれば、コンビニで{食|た}べ{物|もの}を{買|か}います。`),
+        zhText: "如果有时间，会在便利店买些吃的。",
         vocab: [
-          { jp: "待つ",     reading: "まつ",     zh: "等待",         grammar: "動詞 う-verb",    icon: "⏳" },
-          { jp: "コンビニ", reading: "コンビニ", zh: "便利店",       grammar: "名詞（外来語）",  icon: "🏪" },
-          { jp: "食べ物",   reading: "たべもの", zh: "食物",         grammar: "名詞",            icon: "🍱" },
-          { jp: "買う",     reading: "かう",     zh: "购买",         grammar: "動詞 う-verb",    icon: "🛍️" }
+          { jp: "〜があれば", reading: "〜があれば", zh: "如果有〜",  grammar: "表現" },
+          { jp: "コンビニ",   reading: "こんびに",   zh: "便利店",   grammar: "名詞" },
+          { jp: "食べ物",     reading: "たべもの",   zh: "食物",     grammar: "名詞" }
         ]
       },
       {
         image: "scene3.png", audio: "s3.mp3",
-        jpHtml: `<ruby>空港<rt>くうこう</rt></ruby>は、いつも私の<ruby>人生<rt>じんせい</rt></ruby>の<ruby>旅<rt>たび</rt></ruby>の<br><ruby>大切<rt>たいせつ</rt></ruby>な<ruby>場所<rt>ばしょ</rt></ruby>です。`,
-        zhText: "机场，始终是我人生旅途中，珍贵的一处停靠。",
+        jpHtml: r(`{海外|かいがい}では、お{土産|みやげ}の{店|みせ}でお{土産|みやげ}を{買|か}います。`),
+        zhText: "在海外，会在伴手礼店买伴手礼。",
         vocab: [
-          { jp: "いつも", reading: "いつも",   zh: "总是、经常",     grammar: "副詞",           icon: "🔄" },
-          { jp: "人生",   reading: "じんせい", zh: "人生",           grammar: "名詞",            icon: "🌟" },
-          { jp: "旅",     reading: "たび",     zh: "旅行、旅途",     grammar: "名詞",            icon: "🧳" },
-          { jp: "大切",   reading: "たいせつ", zh: "重要的、珍贵的", grammar: "な形容詞",        icon: "💝" }
+          { jp: "海外",   reading: "かいがい", zh: "海外、国外", grammar: "名詞" },
+          { jp: "お土産", reading: "おみやげ", zh: "伴手礼",     grammar: "名詞" },
+          { jp: "店",     reading: "みせ",     zh: "店",         grammar: "名詞" }
+        ]
+      },
+      {
+        image: "scene4.png", audio: "s4.mp3",
+        jpHtml: r(`{待|ま}っている{時|とき}に、{仕事|しごと}をすることもありますよ。<br>{会社|かいしゃ}を{経営|けいえい}している{私|わたし}にとっては、<br>{仕事|しごと}が{一番|いちばん}{重要|じゅうよう}なことですから。`),
+        zhText: "等待的时候，也会工作哦。对于经营公司的我来说，工作是最重要的事情。",
+        vocab: [
+          { jp: "経営する",  reading: "けいえいする", zh: "经营",        grammar: "動詞" },
+          { jp: "〜にとって", reading: "〜にとって", zh: "对〜来说",     grammar: "表現" },
+          { jp: "重要",      reading: "じゅうよう",  zh: "重要",         grammar: "ナ形容詞" }
+        ]
+      },
+      {
+        image: "scene5.png", audio: "s5.mp3",
+        jpHtml: r(`{今|いま}の{私|わたし}は{何|なに}を{考|かんが}えていますか？{当|あ}ててみて？<br>{飛行機|ひこうき}の{弁当|べんとう}のことを{考|かんが}えていますよ！`),
+        zhText: "现在的我在想什么？你猜猜看？我在想飞机上的便当！",
+        vocab: [
+          { jp: "当てる",  reading: "あてる",   zh: "猜中",  grammar: "動詞" },
+          { jp: "飛行機",  reading: "ひこうき", zh: "飞机",  grammar: "名詞" },
+          { jp: "弁当",    reading: "べんとう", zh: "便当",  grammar: "名詞" }
         ]
       }
     ]
