@@ -647,14 +647,13 @@ function prevPage() {
 
 const splashAudio = new Audio('assets/cover.mp3');
 
-// 封面第一次被触碰时启动音效（绕过浏览器自动播放限制）
 document.addEventListener('DOMContentLoaded', () => {
-  const splashBook = document.querySelector('.splash-book');
-  if (splashBook) {
-    splashBook.addEventListener('pointerdown', () => {
+  // 页面加载后立即播放封面音效，浏览器拦截则等用户第一次点击再播
+  splashAudio.play().catch(() => {
+    document.addEventListener('pointerdown', () => {
       splashAudio.play().catch(() => {});
     }, { once: true });
-  }
+  });
 
   // 后台预加载所有集封面图和第一集第一场景
   setTimeout(() => {
