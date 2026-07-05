@@ -725,12 +725,13 @@ function togglePlay() {
 function stopPlay() {
   audioEl.pause();
   playing = false;
-  playIcon.src = 'assets/icons/play.webp';
+  playIcon.src = CDN + 'assets/icons/play.webp';
+
   btnPlay.classList.remove('on');
 }
 audioEl.addEventListener('play', () => {
   playing = true;
-  playIcon.src = 'assets/icons/pause.webp';
+  playIcon.src = CDN + 'assets/icons/pause.webp';
   btnPlay.classList.add('on');
 });
 audioEl.addEventListener('pause', stopPlay);
