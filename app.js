@@ -466,6 +466,78 @@ const episodes = [
     ]
   },
 
+  // ── EP 09 はじめまして ──────────────────────────
+  {
+    title:    "はじめまして",
+    subtitle: "EP 09",
+    basePath: CDN + "episodes/EP009_はじめまして/",
+    pages: [
+      {
+        image: "title.webp", audio: "title.mp3",
+        jpHtml: r(`はじめまして`), isCover: true, vocab: []
+      },
+      {
+        image: "scene1.webp", audio: "s1.mp3",
+        jpHtml: r(`<span class="sp">渡辺</span>　{社長|しゃちょう}、{土曜日|どようび}の{夜|よる}、{家|いえ}でパーティーをします。よかったら{来|き}てください。<br><span class="sp">邵</span>　あ、ありがとうございます。お{花|はな}を{持|も}っていきます。`),
+        zhText: "渡辺：社长，周六晚上我在家搞个派对，方便的话请来玩。\n邵：啊，谢谢您。我带点花去。",
+        vocab: [
+          { jp: "社長",       reading: "しゃちょう", zh: "社长",         grammar: "名詞" },
+          { jp: "よかったら", reading: "よかったら", zh: "如果方便的话", grammar: "表現" },
+          { jp: "持っていく", reading: "もっていく", zh: "带去",         grammar: "動詞" },
+        ]
+      },
+      {
+        image: "scene2.webp", audio: "s2.mp3",
+        jpHtml: r(`<span class="sp">渡辺</span>　{社長|しゃちょう}、{紹介|しょうかい}しますね。こちらは{鈴木|すずき}さん、{私|わたし}の{高校|こうこう}{時代|じだい}の{友達|ともだち}です。こちらは{会社|かいしゃ}の{社長|しゃちょう}さんです。<br><span class="sp">鈴木</span>　はじめまして、{鈴木|すずき}と{申|もう}します。よろしくお{願|ねが}いします。<br><span class="sp">邵</span>　はじめまして、{邵|しゃお}と{申|もう}します。よろしくお{願|ねが}いします。`),
+        zhText: "渡辺：社长，给你介绍一下。这位是铃木，我高中时代的朋友。这位是我们公司的社长。\n铃木：初次见面，我叫铃木，请多关照。\n邵：初次见面，我叫邵，请多关照。",
+        vocab: [
+          { jp: "紹介する",            reading: "しょうかいする",         zh: "介绍",           grammar: "動詞" },
+          { jp: "高校時代",            reading: "こうこうじだい",         zh: "高中时代",       grammar: "名詞" },
+          { jp: "〜と申します",        reading: "〜ともうします",         zh: "我叫〜（谦逊）", grammar: "表現" },
+          { jp: "よろしくお願いします", reading: "よろしくおねがいします", zh: "请多关照",       grammar: "表現" },
+        ]
+      },
+      {
+        image: "scene3.webp", audio: "s3.mp3",
+        jpHtml: r(`<span class="sp">鈴木</span>　はい、{飲|の}み{物|もの}をどうぞ。<br><span class="sp">邵</span>　ありがとうございます。{鈴木|すずき}さんも{北京|ペキン}に{住|す}んでいますか？<br><span class="sp">鈴木</span>　いや、{出張|しゅっちょう}で{北京|ペキン}に{来|き}ました。`),
+        zhText: "铃木：请喝饮料。\n邵：谢谢。铃木小姐也住在北京吗？\n铃木：不，我是出差来北京的。",
+        vocab: [
+          { jp: "飲み物",   reading: "のみもの",     zh: "饮料",   grammar: "名詞" },
+          { jp: "〜に住む", reading: "〜にすむ",     zh: "住在〜", grammar: "動詞" },
+          { jp: "出張",     reading: "しゅっちょう", zh: "出差",   grammar: "名詞" },
+        ]
+      },
+      {
+        image: "scene4.webp", audio: "s4.mp3",
+        jpHtml: r(`<span class="sp">邵</span>　{北京|ペキン}は{初|はじ}めてですか？<br><span class="sp">鈴木</span>　ええ、{初|はじ}めて{中国|ちゅうごく}に{来|き}ましたよ。せっかくだから{観光|かんこう}もしたいです。`),
+        zhText: "邵：是第一次来北京吗？\n铃木：是的，是第一次来中国。难得来一次，也想观光一下。",
+        vocab: [
+          { jp: "初めて",   reading: "はじめて",     zh: "第一次",     grammar: "副詞" },
+          { jp: "せっかく", reading: "せっかく",     zh: "难得、特意", grammar: "副詞" },
+          { jp: "観光する", reading: "かんこうする", zh: "观光、游览", grammar: "動詞" },
+        ]
+      },
+      {
+        image: "scene5.webp", audio: "s5.mp3",
+        jpHtml: r(`<span class="sp">邵</span>　じゃ、{明日|あした}{一緒|いっしょ}に{遊|あそ}びましょう。{案内|あんない}しますから。<br><span class="sp">渡辺</span>　{社長|しゃちょう}、{明日|あした}{会議|かいぎ}があるんじゃないですか？`),
+        zhText: "邵：那明天一起去玩吧，我来带路。\n渡辺：社长，明天不是有会议吗？",
+        vocab: [
+          { jp: "案内する",           reading: "あんないする",       zh: "带路、引导", grammar: "動詞" },
+          { jp: "会議",               reading: "かいぎ",             zh: "会议",       grammar: "名詞" },
+          { jp: "〜んじゃないですか", reading: "〜んじゃないですか", zh: "不是〜吗？", grammar: "表現" },
+        ]
+      },
+      {
+        image: "scene6.webp", audio: "s6.mp3",
+        jpHtml: r(`<span class="sp">邵</span>　{黙|だま}りなさいよ。`),
+        zhText: "邵：给我闭嘴。",
+        vocab: [
+          { jp: "黙りなさい", reading: "だまりなさい", zh: "给我闭嘴（命令）", grammar: "動詞（命令形）" },
+        ]
+      },
+    ]
+  },
+
 ];
 
 // ════════════════════════════════════════
