@@ -519,20 +519,20 @@ const episodes = [
       },
       {
         image: "scene5.webp", audio: "s5.mp3",
-        jpHtml: r(`<span class="sp">邵</span>　じゃ、{明日|あした}{一緒|いっしょ}に{遊|あそ}びましょう。{案内|あんない}しますから。<br><span class="sp">渡辺</span>　{社長|しゃちょう}、{明日|あした}{会議|かいぎ}があるんじゃないですか？`),
-        zhText: "邵：那明天一起去玩吧，我来带路。\n渡辺：社长，明天不是有会议吗？",
+        jpHtml: r(`<span class="sp">邵</span>　じゃ、{明日|あした}{一緒|いっしょ}に{遊|あそ}びましょう。{案内|あんない}しますから。`),
+        zhText: "邵：那明天一起去玩吧，我来带路。",
         vocab: [
-          { jp: "案内する",           reading: "あんないする",       zh: "带路、引导", grammar: "動詞" },
-          { jp: "会議",               reading: "かいぎ",             zh: "会议",       grammar: "名詞" },
-          { jp: "〜んじゃないですか", reading: "〜んじゃないですか", zh: "不是〜吗？", grammar: "表現" },
+          { jp: "案内する", reading: "あんないする", zh: "带路、引导", grammar: "動詞" },
         ]
       },
       {
         image: "scene6.webp", audio: "s6.mp3",
-        jpHtml: r(`<span class="sp">邵</span>　{黙|だま}りなさいよ。`),
-        zhText: "邵：给我闭嘴。",
+        jpHtml: r(`<span class="sp">渡辺</span>　{社長|しゃちょう}、{明日|あした}{会議|かいぎ}があるんじゃないですか？<br><span class="sp">邵</span>　{黙|だま}りなさいよ。`),
+        zhText: "渡辺：社长，明天不是有会议吗？\n邵：给我闭嘴。",
         vocab: [
-          { jp: "黙りなさい", reading: "だまりなさい", zh: "给我闭嘴（命令）", grammar: "動詞（命令形）" },
+          { jp: "会議",               reading: "かいぎ",             zh: "会议",       grammar: "名詞" },
+          { jp: "〜んじゃないですか", reading: "〜んじゃないですか", zh: "不是〜吗？", grammar: "表現" },
+          { jp: "黙りなさい",         reading: "だまりなさい",       zh: "给我闭嘴（命令）", grammar: "動詞（命令形）" },
         ]
       },
     ]
